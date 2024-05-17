@@ -7,7 +7,7 @@
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "NorthwindConnection": "DATA SOURCE=NameServer\\SQLEXPRESS; Database=Northwind; User Id=xx; Password=??; TrustServerCertificate=true"
+    "NorthwindConnection": "DATA SOURCE=NameServer\\SQLEXPRESS; Database=Rusia2018; User Id=xx; Password=??; TrustServerCertificate=true"
   },
   "Config": {
     "OriginCors": "http://localhost:5171/",
