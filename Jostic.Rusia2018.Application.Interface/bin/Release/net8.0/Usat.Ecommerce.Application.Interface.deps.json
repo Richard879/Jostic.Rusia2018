@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Usat.Ecommerce.Application.Interface/1.0.0": {
+        "dependencies": {
+          "Usat.Ecommerce.Application.DTO": "1.0.0",
+          "Usat.Ecommerce.Transversal.Common": "1.0.0"
+        },
+        "runtime": {
+          "Usat.Ecommerce.Application.Interface.dll": {}
+        }
+      },
+      "Usat.Ecommerce.Application.DTO/1.0.0": {
+        "runtime": {
+          "Usat.Ecommerce.Application.DTO.dll": {}
+        }
+      },
+      "Usat.Ecommerce.Transversal.Common/1.0.0": {
+        "runtime": {
+          "Usat.Ecommerce.Transversal.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Usat.Ecommerce.Application.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Usat.Ecommerce.Application.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Usat.Ecommerce.Transversal.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

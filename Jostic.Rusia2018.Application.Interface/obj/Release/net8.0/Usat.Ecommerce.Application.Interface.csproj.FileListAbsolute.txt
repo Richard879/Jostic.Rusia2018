@@ -1,0 +1,17 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Application.Interface.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Application.Interface.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Application.Interface.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Transversal.Common.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\bin\Release\net8.0\Usat.Ecommerce.Transversal.Common.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.csproj.AssemblyReference.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.csproj.CopyComplete
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\refint\Usat.Ecommerce.Application.Interface.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\Usat.Ecommerce.Application.Interface.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Interface\obj\Release\net8.0\ref\Usat.Ecommerce.Application.Interface.dll

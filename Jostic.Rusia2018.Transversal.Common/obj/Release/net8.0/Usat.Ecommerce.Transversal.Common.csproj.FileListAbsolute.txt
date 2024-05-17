@@ -1,0 +1,11 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\bin\Release\net8.0\Usat.Ecommerce.Transversal.Common.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\bin\Release\net8.0\Usat.Ecommerce.Transversal.Common.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\bin\Release\net8.0\Usat.Ecommerce.Transversal.Common.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\refint\Usat.Ecommerce.Transversal.Common.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\Usat.Ecommerce.Transversal.Common.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Common\obj\Release\net8.0\ref\Usat.Ecommerce.Transversal.Common.dll

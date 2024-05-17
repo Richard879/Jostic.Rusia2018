@@ -1,0 +1,642 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Repository\\Usat.Ecommerce.Infraestructure.Repository.csproj": {}
+  },
+  "projects": {
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj",
+        "projectName": "Usat.Ecommerce.Application.DTO",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj",
+        "projectName": "Usat.Ecommerce.Application.Interface",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\Usat.Ecommerce.Application.Main.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\Usat.Ecommerce.Application.Main.csproj",
+        "projectName": "Usat.Ecommerce.Application.Main",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\Usat.Ecommerce.Application.Main.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\Usat.Ecommerce.Application.Validator.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\Usat.Ecommerce.Application.Validator.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\Usat.Ecommerce.Domain.Interface.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\Usat.Ecommerce.Domain.Interface.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\Usat.Ecommerce.Application.Validator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\Usat.Ecommerce.Application.Validator.csproj",
+        "projectName": "Usat.Ecommerce.Application.Validator",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\Usat.Ecommerce.Application.Validator.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Validator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.DTO\\Usat.Ecommerce.Application.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj",
+        "projectName": "Usat.Ecommerce.Domain.Entity",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\Usat.Ecommerce.Domain.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\Usat.Ecommerce.Domain.Interface.csproj",
+        "projectName": "Usat.Ecommerce.Domain.Interface",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\Usat.Ecommerce.Domain.Interface.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Domain.Entity\\Usat.Ecommerce.Domain.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\Usat.Ecommerce.Persistence.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\Usat.Ecommerce.Persistence.Data.csproj",
+        "projectName": "Usat.Ecommerce.Persistence.Data",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\Usat.Ecommerce.Persistence.Data.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Repository\\Usat.Ecommerce.Infraestructure.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Repository\\Usat.Ecommerce.Infraestructure.Repository.csproj",
+        "projectName": "Usat.Ecommerce.Infraestructure.Repository",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Repository\\Usat.Ecommerce.Infraestructure.Repository.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Interface\\Usat.Ecommerce.Application.Interface.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\Usat.Ecommerce.Application.Main.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Application.Main\\Usat.Ecommerce.Application.Main.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\Usat.Ecommerce.Persistence.Data.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Infraestructure.Data\\Usat.Ecommerce.Persistence.Data.csproj"
+              },
+              "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj": {
+                "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.24, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj",
+        "projectName": "Usat.Ecommerce.Transversal.Common",
+        "projectPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\Usat.Ecommerce.Transversal.Common.csproj",
+        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
+        "outputPath": "F:\\Richard\\Py_Visual\\Usat.Ecommerce\\Usat.Ecommerce.Transversal.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

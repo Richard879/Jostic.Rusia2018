@@ -1,0 +1,16 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\bin\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\bin\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\bin\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\bin\Debug\net8.0\Usat.Ecommerce.Transversal.Common.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\bin\Debug\net8.0\Usat.Ecommerce.Transversal.Common.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.csproj.AssemblyReference.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.sourcelink.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.csproj.CopyComplete
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\refint\Usat.Ecommerce.Transversal.Logging.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\Usat.Ecommerce.Transversal.Logging.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Logging\obj\Debug\net8.0\ref\Usat.Ecommerce.Transversal.Logging.dll

@@ -1,0 +1,16 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\bin\Debug\net8.0\Usat.Ecommerce.Application.Validator.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\bin\Debug\net8.0\Usat.Ecommerce.Application.Validator.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\bin\Debug\net8.0\Usat.Ecommerce.Application.Validator.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\bin\Debug\net8.0\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\bin\Debug\net8.0\Usat.Ecommerce.Application.DTO.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.csproj.AssemblyReference.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.sourcelink.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.csproj.CopyComplete
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\refint\Usat.Ecommerce.Application.Validator.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\Usat.Ecommerce.Application.Validator.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.Validator\obj\Debug\net8.0\ref\Usat.Ecommerce.Application.Validator.dll

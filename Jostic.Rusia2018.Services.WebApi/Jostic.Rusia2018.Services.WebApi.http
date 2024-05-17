@@ -1,0 +1,6 @@
+@Usat.Ecommerce.Services.WebApi_HostAddress = http://localhost:5171
+
+GET {{Usat.Ecommerce.Services.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Jostic.Rusia2018.Services.WebApi.props" />
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jostic.Rusia2018.Application.DTO\Jostic.Rusia2018.Application.DTO.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Domain.Entity\Jostic.Rusia2018.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Common\Jostic.Rusia2018.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

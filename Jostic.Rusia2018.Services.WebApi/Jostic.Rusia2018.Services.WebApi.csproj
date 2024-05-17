@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Http" Version="8.0.0" />
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.0.0" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jostic.Rusia2018.Application.Interface\Jostic.Rusia2018.Application.Interface.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Application.UseCases\Jostic.Rusia2018.Application.UseCases.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Application.Validator\Jostic.Rusia2018.Application.Validator.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Persistence\Jostic.Rusia2018.Persistence.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Logging\Jostic.Rusia2018.Transversal.Logging.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Mapper\Jostic.Rusia2018.Transversal.Mapper.csproj" />
+  </ItemGroup>
+
+</Project>

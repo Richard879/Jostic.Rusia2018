@@ -1,0 +1,11 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\refint\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\Usat.Ecommerce.Application.DTO.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Application.DTO\obj\Release\net8.0\ref\Usat.Ecommerce.Application.DTO.dll

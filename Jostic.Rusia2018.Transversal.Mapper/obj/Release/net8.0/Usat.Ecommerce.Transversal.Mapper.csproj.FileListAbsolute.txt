@@ -1,0 +1,17 @@
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.deps.json
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Domain.Entity.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Application.DTO.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\bin\Release\net8.0\Usat.Ecommerce.Domain.Entity.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.csproj.AssemblyReference.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.GeneratedMSBuildEditorConfig.editorconfig
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.AssemblyInfoInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.AssemblyInfo.cs
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.csproj.CoreCompileInputs.cache
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.csproj.CopyComplete
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\refint\Usat.Ecommerce.Transversal.Mapper.dll
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\Usat.Ecommerce.Transversal.Mapper.pdb
+F:\Richard\Py_Visual\Usat.Ecommerce\Usat.Ecommerce.Transversal.Mapper\obj\Release\net8.0\ref\Usat.Ecommerce.Transversal.Mapper.dll

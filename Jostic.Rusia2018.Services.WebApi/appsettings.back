@@ -1,0 +1,22 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "NorthwindConnection": "DATA SOURCE=NameServer\\SQLEXPRESS; Database=Northwind; User Id=xx; Password=??; TrustServerCertificate=true"
+  },
+  "Config": {
+    "OriginCors": "http://localhost:5171/",
+    "Secret": "+_)(*&^%$#@!)(JJGGG$$##+____*-+**HHYY)",
+    "Issuer": "Usat.edu.pe",
+    "Audience": "Usat.edu.pe"
+  },
+  "WatchDog": {
+    "WatchPageUsername": "admin",
+    "WatchPagePassword" :  "123456"
+  }
+}
