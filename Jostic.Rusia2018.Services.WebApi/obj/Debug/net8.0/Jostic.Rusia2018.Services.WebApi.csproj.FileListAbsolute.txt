@@ -275,3 +275,9 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\StackExchange.Redis.dll

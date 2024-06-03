@@ -4,6 +4,9 @@ using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Transversal.Common;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
+using System.Text;
 
 namespace Jostic.Rusia2018.Application.UseCases.Grupos
 {
@@ -12,12 +15,14 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IAppLogger<GrupoApplication> _logger;
+        private readonly IDistributedCache _distributedCache;
 
-        public GrupoApplication(IUnitOfWork unitOfWork, IMapper mapper, IAppLogger<GrupoApplication> logger)
+        public GrupoApplication(IUnitOfWork unitOfWork, IMapper mapper, IAppLogger<GrupoApplication> logger, IDistributedCache distributedCache)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
+            _distributedCache = distributedCache;   
         }
 
         #region Métodos Síncronos
@@ -156,9 +161,51 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
             throw new NotImplementedException();
         }
 
-        public Task<Response<IEnumerable<GrupoDto>>> GetAllAsync()
+        public async Task<Response<IEnumerable<GrupoDto>>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var response = new Response<IEnumerable<GrupoDto>>();
+            var cacheKey = "grupoList";
+            TimeSpan? slidingExpiration = null;
+
+            try
+            {
+                var redisGrupo = await _distributedCache.GetAsync(cacheKey);
+                if (redisGrupo != null)
+                {
+                    response.Data = JsonSerializer.Deserialize<IEnumerable<GrupoDto>>(redisGrupo);
+                }
+                else
+                {
+                    var grupos = await _unitOfWork.Grupo.GetAllAsync();
+                    response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
+                    if (response.Data != null)
+                    {
+                        var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
+                        var cacheEntryOptions = new DistributedCacheEntryOptions
+                        {
+                            SlidingExpiration = slidingExpiration ?? TimeSpan.FromSeconds(20)
+                        };
+                        /*var options = new DistributedCacheEntryExtensions()
+                            .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))
+                        .SetSlidingExpiration(DateTime.Now.AddSeconds(5));*/
+
+                        await _distributedCache.SetAsync(cacheKey, serializerGrupo, cacheEntryOptions);
+                    }
+                }
+
+                if (response.Data != null)
+                {
+                    response.IsSucces = true;
+                    response.Message = "Consulta exitosa..!!";
+                    _logger.LogInformation("Consulta exitosa..!!");
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+                _logger.LogError(e.Message);
+            }
+            return response;
         }
 
         public Task<ResponsePagination<IEnumerable<GrupoDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
@@ -171,8 +218,9 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
             throw new NotImplementedException();
         }
 
-        public Task<Response<bool>> InsertAsync(GrupoDto gruposDto)
+        public async Task<Response<bool>> InsertAsync(GrupoDto gruposDto)
         {
+            await _distributedCache.RemoveAsync("grupoList");
             throw new NotImplementedException();
         }
 

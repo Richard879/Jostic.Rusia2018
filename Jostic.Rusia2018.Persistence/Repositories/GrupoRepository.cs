@@ -29,7 +29,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             {
                 var query = "GrupoInsert";
                 var parameters = new DynamicParameters();
-                parameters.Add("idGrupo", entity.idGrupo);
+                //parameters.Add("idGrupo", entity.idGrupo);
                 parameters.Add("descripcion", entity.descripcion);
 
                 var result = connection.Execute(query, param: parameters, commandType: CommandType.StoredProcedure);
@@ -122,9 +122,15 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Grupo>> GetAllAsync()
+        public async Task<IEnumerable<Grupo>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoList";
+
+                var grupos = await connection.QueryAsync<Grupo>(query, commandType: CommandType.StoredProcedure);
+                return grupos;
+            }
         }
 
         public Task<IEnumerable<Grupo>> GetAllWithPaginationAsync(int pageNumber, int pageSize)

@@ -8,8 +8,7 @@ using Jostic.Rusia2018.Services.WebApi.Modules.Mapper;
 using Jostic.Rusia2018.Services.WebApi.Modules.Swagger;
 using Jostic.Rusia2018.Services.WebApi.Modules.Validator;
 using Jostic.Rusia2018.Services.WebApi.Modules.Versioning;
-using Jostic.Rusia2018.Services.WebApi.Modules.Watch;
-using WatchDog;
+using Jostic.Rusia2018.Services.WebApi.Modules.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,8 +27,9 @@ builder.Services.AddAuthentication(builder.Configuration);
 builder.Services.AddVersioning();
 builder.Services.AddSwagger();
 builder.Services.AddValidator();
-builder.Services.addWatchDog(builder.Configuration);
-
+//builder.Services.addWatchDog(builder.Configuration);
+//builder.Services.AddCaching();
+builder.Services.AddRedisCache(builder.Configuration);
 
 var app = builder.Build();
 
@@ -49,18 +49,20 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseWatchDogExceptionLogger();
+
+//app.UseWatchDogExceptionLogger();
 app.UseHttpsRedirection();
 app.UseCors("policyApiEcommerce");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+//app.UseOutputCache();
 
-app.UseWatchDog(conf =>
+/*app.UseWatchDog(conf =>
 {
     conf.WatchPageUsername = builder.Configuration["WatchDog:WatchPageUsername"];
     conf.WatchPagePassword = builder.Configuration["WatchDog:WatchPagePassword"];
-});
+});*/
 
 app.Run();
 

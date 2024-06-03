@@ -1,8 +1,8 @@
 ﻿using Asp.Versioning;
 using Jostic.Rusia2018.Application.DTO;
 using Jostic.Rusia2018.Application.Interface.UseCases;
-using Jostic.Rusia2018.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
+//using Microsoft.Extensions.Caching.Distributed;
 
 namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 {
@@ -12,6 +12,8 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
     public class GrupoController : ControllerBase
     {
         private readonly IGrupoApplication _grupoAplication;
+        //private readonly IOutputCacheStore _outputCacheStore;
+
         public GrupoController(IGrupoApplication grupoAplication)
         {
             _grupoAplication = grupoAplication;
@@ -24,10 +26,11 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             if (grupoDTO == null)
                 return BadRequest();
             var response = _grupoAplication.Insert(grupoDTO);
+           // _outputCacheStore.EvictByTagAsync("policyApiCaching_Tag", default);
             if (response.IsSucces)
                 return Ok(response);
 
-            return BadRequest(response.Message);
+           return BadRequest(response.Message);
         }
 
         [HttpPut("Update/{idGrupo}")]
@@ -71,6 +74,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpGet("GetAll")]
+        //[OutputCache(PolicyName = "policyApiCaching")]
         public IActionResult GetAll()
         {
             var response = _grupoAplication.GetAll();
@@ -90,6 +94,17 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             return BadRequest(response.Message);
         }
         #endregion
+
+
+        [HttpGet("GetAllAsync")]
+        public async Task<IActionResult> GetAllAsync()
+        {
+            var response = await _grupoAplication.GetAllAsync();
+            if (response.IsSucces)
+                return Ok(response);
+
+            return BadRequest(response.Message);
+        }
 
     }
 }
