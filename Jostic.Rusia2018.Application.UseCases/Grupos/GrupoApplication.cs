@@ -260,7 +260,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                         var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
                         var cacheEntryOptions = new DistributedCacheEntryOptions
                         {
-                            SlidingExpiration = slidingExpiration ?? TimeSpan.FromSeconds(20)
+                            SlidingExpiration = slidingExpiration ?? TimeSpan.FromMinutes(30)
                         };
                         /*var options = new DistributedCacheEntryExtensions()
                             .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))

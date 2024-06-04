@@ -237,13 +237,11 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Persistence.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Common.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Logging.dll
-F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Mapper.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Application.Interface.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Application.UseCases.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Application.Validator.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Persistence.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Logging.pdb
-F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Mapper.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Application.DTO.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Domain.Entity.pdb
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Jostic.Rusia2018.Transversal.Common.pdb
@@ -281,3 +279,4 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\StackExchange.Redis.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

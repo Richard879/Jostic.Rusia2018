@@ -4,7 +4,6 @@ using Jostic.Rusia2018.Persistence;
 using Jostic.Rusia2018.Services.WebApi.Modules.Authentication;
 using Jostic.Rusia2018.Services.WebApi.Modules.Feature;
 using Jostic.Rusia2018.Services.WebApi.Modules.Injection;
-using Jostic.Rusia2018.Services.WebApi.Modules.Mapper;
 using Jostic.Rusia2018.Services.WebApi.Modules.Swagger;
 using Jostic.Rusia2018.Services.WebApi.Modules.Validator;
 using Jostic.Rusia2018.Services.WebApi.Modules.Versioning;
@@ -18,7 +17,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddMapper();
 builder.Services.AddFeature(builder.Configuration);
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration);

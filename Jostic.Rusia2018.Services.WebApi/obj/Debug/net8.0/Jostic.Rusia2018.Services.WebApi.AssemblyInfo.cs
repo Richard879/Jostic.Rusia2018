@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jostic.Rusia2018.Services.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86374870e5f5059d31f980833f9ffd60806680f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd14122b080e00efd14746494a099eae0e5bddcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jostic.Rusia2018.Services.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jostic.Rusia2018.Services.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

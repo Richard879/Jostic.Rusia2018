@@ -35,8 +35,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jostic.Rusia2018.Transversa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jostic.Rusia2018.Transversal.Logging", "Jostic.Rusia2018.Transversal.Logging\Jostic.Rusia2018.Transversal.Logging.csproj", "{091CFCF3-99E1-44A7-B6BA-2032600D3253}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jostic.Rusia2018.Transversal.Mapper", "Jostic.Rusia2018.Transversal.Mapper\Jostic.Rusia2018.Transversal.Mapper.csproj", "{7D2F3432-6199-46BF-942C-2BB0309AA9F3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,10 +81,6 @@ Global
 		{091CFCF3-99E1-44A7-B6BA-2032600D3253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091CFCF3-99E1-44A7-B6BA-2032600D3253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091CFCF3-99E1-44A7-B6BA-2032600D3253}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D2F3432-6199-46BF-942C-2BB0309AA9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D2F3432-6199-46BF-942C-2BB0309AA9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D2F3432-6199-46BF-942C-2BB0309AA9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D2F3432-6199-46BF-942C-2BB0309AA9F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,7 +96,6 @@ Global
 		{39AC51D0-2579-49AB-B71A-794477E1D586} = {5B2B23A2-E8E0-49F5-89A0-8091B13B0EAF}
 		{2CEAF081-2602-4118-B4DA-6FB3D7592830} = {CB401849-1697-49C2-8E22-F2839A408F16}
 		{091CFCF3-99E1-44A7-B6BA-2032600D3253} = {CB401849-1697-49C2-8E22-F2839A408F16}
-		{7D2F3432-6199-46BF-942C-2BB0309AA9F3} = {CB401849-1697-49C2-8E22-F2839A408F16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21C8FD29-A599-4F74-9FC5-4660FBD1CAE6}

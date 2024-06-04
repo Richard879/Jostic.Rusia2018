@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5QzJu1/CJQT+0H/IZ5u/IiSjwMZoL7Br9fe7j/408SA+fGbh6HlEoYeqCN03KiHzk2RrQgnH4SxosVSSVwQggA==",
+  "dgSpecHash": "oABZDaKG7mX6gqy5EbLMwstmltbQlaL9hN1phvvFw4AadgY+HjKFf43napw2LzD+0dKq/y+MW3D/DzkuJtU1kQ==",
   "success": true,
   "projectFilePath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.UseCases\\Jostic.Rusia2018.Application.UseCases.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RICHARD\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\RICHARD\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

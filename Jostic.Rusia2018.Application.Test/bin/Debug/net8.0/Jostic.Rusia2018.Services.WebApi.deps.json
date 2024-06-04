@@ -16,7 +16,6 @@
           "Jostic.Rusia2018.Application.Validator": "1.0.0",
           "Jostic.Rusia2018.Persistence": "1.0.0",
           "Jostic.Rusia2018.Transversal.Logging": "1.0.0",
-          "Jostic.Rusia2018.Transversal.Mapper": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -77,6 +76,18 @@
         },
         "runtime": {
           "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.1.0"
           }
@@ -2331,6 +2342,7 @@
       "Jostic.Rusia2018.Application.UseCases/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Jostic.Rusia2018.Application.DTO": "1.0.0",
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
           "Jostic.Rusia2018.Application.Validator": "1.0.0",
@@ -2390,16 +2402,6 @@
         "runtime": {
           "Jostic.Rusia2018.Transversal.Logging.dll": {}
         }
-      },
-      "Jostic.Rusia2018.Transversal.Mapper/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "Jostic.Rusia2018.Application.DTO": "1.0.0",
-          "Jostic.Rusia2018.Domain.Entity": "1.0.0"
-        },
-        "runtime": {
-          "Jostic.Rusia2018.Transversal.Mapper.dll": {}
-        }
       }
     }
   },
@@ -2443,6 +2445,13 @@
       "sha512": "sha512-hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "path": "automapper/12.0.1",
       "hashPath": "automapper.12.0.1.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
     },
     "Azure.Core/1.35.0": {
       "type": "package",
@@ -4167,11 +4176,6 @@
       "sha512": ""
     },
     "Jostic.Rusia2018.Transversal.Logging/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Jostic.Rusia2018.Transversal.Mapper/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

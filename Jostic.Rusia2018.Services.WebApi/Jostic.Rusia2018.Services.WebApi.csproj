@@ -24,7 +24,6 @@
     <ProjectReference Include="..\Jostic.Rusia2018.Application.Validator\Jostic.Rusia2018.Application.Validator.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Persistence\Jostic.Rusia2018.Persistence.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Logging\Jostic.Rusia2018.Transversal.Logging.csproj" />
-    <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Mapper\Jostic.Rusia2018.Transversal.Mapper.csproj" />
   </ItemGroup>
 
 </Project>
