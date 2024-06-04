@@ -35,12 +35,12 @@ namespace Jostic.Rusia2018.Application.UseCases.Users
             {
                 var user = _unitOfWork.Users.Authenticate(username, password);
                 response.Data = _mapper.Map<UserDto>(user);
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Message = "Autenticación Exitosa!!!";
             }
             catch (InvalidOperationException)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Message = "Usuario no existe!!!";
             }
             catch (Exception ex)

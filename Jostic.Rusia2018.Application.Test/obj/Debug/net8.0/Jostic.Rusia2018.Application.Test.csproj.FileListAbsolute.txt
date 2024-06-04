@@ -652,7 +652,6 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debu
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.Abstractions.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Diagnostics.dll
@@ -671,7 +670,6 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debu
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.dll
-F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Configuration.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Console.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Debug.dll
@@ -682,7 +680,6 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debu
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.ObjectPool.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Options.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.Primitives.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.Extensions.WebEncoders.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\refs\Microsoft.JSInterop.dll
@@ -1063,3 +1060,9 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debu
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\StackExchange.Redis.dll

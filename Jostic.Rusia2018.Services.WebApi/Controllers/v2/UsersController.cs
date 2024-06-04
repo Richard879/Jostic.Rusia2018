@@ -33,7 +33,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         public IActionResult Authenticate([FromBody] UserDto userDto)
         {
             var response = _usersApplication.Authenticate(userDto.UserName, userDto.Password);
-            if (response.IsSucces)
+            if (response.IsSuccess)
             {
                 if (response.Data != null)
                 {

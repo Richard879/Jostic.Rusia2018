@@ -2,13 +2,7 @@
 using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Persistence.Context;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Dapper.SqlMapper;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
@@ -99,6 +93,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             var grupos = connection.Query<Grupo>(query, param: parameters, commandType: CommandType.StoredProcedure);
             return grupos;
         }
+
         public int Count()
         {
             using var connection = _context.CreateConnection();
@@ -112,14 +107,57 @@ namespace Jostic.Rusia2018.Persistence.Repositories
 
         #region Métodos Asíncronos
 
-        public Task<int> CountAsync()
+        public async Task<bool> InsertAsync(Grupo entity)
         {
-            throw new NotImplementedException();
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoInsert";
+                var parameters = new DynamicParameters();
+                parameters.Add("descripcion", entity.descripcion);
+
+                var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return result > 0;
+            }
         }
 
-        public Task<bool> DeleteAsync(int id)
+        public async Task<bool> UpdateAsync(Grupo entity)
         {
-            throw new NotImplementedException();
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoUpdate";
+                var parameters = new DynamicParameters();
+                parameters.Add("idGrupo", entity.idGrupo);
+                parameters.Add("descripcion", entity.descripcion);
+
+                var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return result > 0;
+            }
+        }
+        
+        public async Task<bool> DeleteAsync(int id)
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoDelete";
+                var parameters = new DynamicParameters();
+                parameters.Add("idGrupo", id);
+
+                var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return result > 0;
+            }
+        }
+
+        public async Task<Grupo> GetAsync(int id)
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoGetByID";
+                var parameters = new DynamicParameters();
+                parameters.Add("idGrupo", id);
+
+                var grupo = await connection.QuerySingleAsync<Grupo>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return grupo;
+            }
         }
 
         public async Task<IEnumerable<Grupo>> GetAllAsync()
@@ -133,24 +171,26 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             }
         }
 
-        public Task<IEnumerable<Grupo>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        public async Task<IEnumerable<Grupo>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
         {
-            throw new NotImplementedException();
+            using var connection = _context.CreateConnection();
+            var query = "GrupoListWithPagination";
+            var parameters = new DynamicParameters();
+            parameters.Add("PageNumber", pageNumber);
+            parameters.Add("PageSize", pageSize);
+
+            var grupos = await connection.QueryAsync<Grupo>(query, param: parameters, commandType: CommandType.StoredProcedure);
+            return grupos;
         }
 
-        public Task<Grupo> GetAsync(int id)
+        public async Task<int> CountAsync()
         {
-            throw new NotImplementedException();
-        }
+            using var connection = _context.CreateConnection();
+            var query = "Select Count(*) from Grupo";
+            var parameters = new DynamicParameters();
 
-        public Task<bool> InsertAsync(Grupo entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> UpdateAsync(Grupo entity)
-        {
-            throw new NotImplementedException();
+            var count = await connection.ExecuteScalarAsync<int>(query, commandType: CommandType.Text);
+            return count;
         }
         #endregion
     }

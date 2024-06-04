@@ -1829,6 +1829,14 @@
             "fileVersion": "0.6.2.0"
           }
         }
+      },
+      "Jostic.Rusia2018.Transversal.Common/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.0"
+        },
+        "runtime": {
+          "Jostic.Rusia2018.Transversal.Common.dll": {}
+        }
       }
     }
   },
@@ -3286,6 +3294,11 @@
       "sha512": "sha512-jPao/LdUNLUz8rn3H1D8W7wQbZsRZM0iayvWI4xGejJg3XJHT56gcmYdgmCGPdJF1UEBqUjucCRrFB+4HbJsbw==",
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
+    },
+    "Jostic.Rusia2018.Transversal.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

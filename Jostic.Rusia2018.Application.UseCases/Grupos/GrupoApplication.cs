@@ -35,7 +35,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                 response.Data = _unitOfWork.Grupo.Insert(grupo);
                 if (response.Data)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Registro exitoso..!!";
                 }
             }
@@ -55,7 +55,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                 response.Data = _unitOfWork.Grupo.Update(grupo);
                 if (response.Data)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Actualización exitosa..!!";
                 }
             }
@@ -74,7 +74,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                 response.Data = _unitOfWork.Grupo.Delete(idGrupo);
                 if (response.Data)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Eliminación exitosa..!!";
                 }
             }
@@ -94,7 +94,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                 response.Data = _mapper.Map<GrupoDto>(grupo);
                 if (response.Data != null)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Consulta exitosa..!!";
                 }
             }
@@ -114,7 +114,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                 response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
                 if (response.Data != null)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Consulta exitosa..!!";
                     _logger.LogInformation("Consulta exitosa..!!");
                 }
@@ -140,7 +140,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
                     response.PageNumer = pageNumber;
                     response.TotalPages = (int)Math.Ceiling(count / (double)pageSize);
                     response.TotalCount = count;
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Consulta paginada exitosa..!!";
                 }
             }
@@ -152,13 +152,90 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
             return response;
         }
 
-       
+
         #endregion
 
         #region Métodos Asíncronos
-        public Task<Response<bool>> DeleteAsync(int grupoId)
+        public async Task<Response<bool>> InsertAsync(GrupoDto entity)
         {
-            throw new NotImplementedException();
+            var response = new Response<bool>();
+            try
+            {
+                var grupo = _mapper.Map<Grupo>(entity);
+                response.Data = await _unitOfWork.Grupo.InsertAsync(grupo);
+                if (response.Data)
+                {
+                    await _distributedCache.RemoveAsync("grupoList");
+                    response.IsSuccess = true;
+                    response.Message = "Registro exitoso..!!";
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+            }
+            return response;
+        }
+
+        public async Task<Response<bool>> UpdateAsync(GrupoDto entity)
+        {
+            var response = new Response<bool>();
+            try
+            {
+                var grupo = _mapper.Map<Grupo>(entity);
+                response.Data = await _unitOfWork.Grupo.UpdateAsync(grupo);
+                if (response.Data)
+                {
+                    await _distributedCache.RemoveAsync("grupoList");
+                    response.IsSuccess = true;
+                    response.Message = "Actualización exitosa..!!";
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+            }
+            return response;
+        }
+
+        public async Task<Response<bool>> DeleteAsync(int idGrupo)
+        {
+            var response = new Response<bool>();
+            try
+            {
+                response.Data = await _unitOfWork.Grupo.DeleteAsync(idGrupo);
+                if (response.Data)
+                {
+                    await _distributedCache.RemoveAsync("grupoList");
+                    response.IsSuccess = true;
+                    response.Message = "Eliminación exitosa..!!";
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+            }
+            return response;
+        }
+
+        public async Task<Response<GrupoDto>> GetAsync(int idGrupo)
+        {
+            var response = new Response<GrupoDto>();
+            try
+            {
+                var grupo = await _unitOfWork.Grupo.GetAsync(idGrupo);
+                response.Data = _mapper.Map<GrupoDto>(grupo);
+                if (response.Data != null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Consulta exitosa..!!";
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+            }
+            return response;
         }
 
         public async Task<Response<IEnumerable<GrupoDto>>> GetAllAsync()
@@ -195,7 +272,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
 
                 if (response.Data != null)
                 {
-                    response.IsSucces = true;
+                    response.IsSuccess = true;
                     response.Message = "Consulta exitosa..!!";
                     _logger.LogInformation("Consulta exitosa..!!");
                 }
@@ -208,26 +285,31 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
             return response;
         }
 
-        public Task<ResponsePagination<IEnumerable<GrupoDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        public async Task<ResponsePagination<IEnumerable<GrupoDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
         {
-            throw new NotImplementedException();
+            var response = new ResponsePagination<IEnumerable<GrupoDto>>();
+            try
+            {
+                var count = await _unitOfWork.Grupo.CountAsync();
+                var customers = await _unitOfWork.Grupo.GetAllWithPaginationAsync(pageNumber, pageSize);
+                response.Data = _mapper.Map<IEnumerable<GrupoDto>>(customers);
+                if (response.Data != null)
+                {
+                    response.PageNumer = pageNumber;
+                    response.TotalPages = (int)Math.Ceiling(count / (double)pageSize);
+                    response.TotalCount = count;
+                    response.IsSuccess = true;
+                    response.Message = "Consulta paginada exitosa..!!";
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+                _logger.LogError(e.Message);
+            }
+            return response;
         }
 
-        public Task<Response<GrupoDto>> GetAsync(int grupoId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Response<bool>> InsertAsync(GrupoDto gruposDto)
-        {
-            await _distributedCache.RemoveAsync("grupoList");
-            throw new NotImplementedException();
-        }
-
-        public Task<Response<bool>> UpdateAsync(GrupoDto gruposDto)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
     }
 }
