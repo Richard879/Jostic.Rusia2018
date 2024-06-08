@@ -4,5 +4,6 @@
     {
         IUsersRepository Users { get; }
         IGrupoRepository Grupo { get; }
+        IPaisRepository Pais { get; }
     }
 }

@@ -8,10 +8,13 @@ namespace Jostic.Rusia2018.Persistence.Repositories
 
         public IGrupoRepository Grupo { get; }
 
-        public UnitOfWork(IUsersRepository users, IGrupoRepository grupo)
+        public IPaisRepository Pais { get; }
+
+        public UnitOfWork(IUsersRepository users, IGrupoRepository grupo, IPaisRepository pais)
         {
             Users = users;
             Grupo = grupo;
+            Pais = pais;
         }
 
         public void Dispose()

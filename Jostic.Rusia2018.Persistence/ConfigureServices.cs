@@ -13,6 +13,7 @@ namespace Jostic.Rusia2018.Persistence
             services.AddSingleton<DapperContext>();
             services.AddScoped<IGrupoRepository, GrupoRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IPaisRepository, PaisRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
