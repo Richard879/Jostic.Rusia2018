@@ -56,6 +56,22 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             }
         }
 
+        public List<Pais> GetPaises()
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "PaisList";
+
+                var grupos = connection.Query<Pais, Grupo, Pais>(query, (country, group) => {
+                    country.grupo = group;
+                    return country;
+                },
+                splitOn: "idGrupo").ToList();
+
+                return grupos;
+            }
+        }
+
         public Task<IEnumerable<Pais>> GetAllAsync()
         {
             throw new NotImplementedException();

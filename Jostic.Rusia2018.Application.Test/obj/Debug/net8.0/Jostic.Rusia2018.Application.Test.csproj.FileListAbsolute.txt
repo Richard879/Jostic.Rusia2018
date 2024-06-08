@@ -1065,3 +1065,4 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debu
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\StackExchange.Redis.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Application.Test\bin\Debug\net8.0\System.ClientModel.dll

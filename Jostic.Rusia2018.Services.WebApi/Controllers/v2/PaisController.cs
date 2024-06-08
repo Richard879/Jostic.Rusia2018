@@ -18,10 +18,12 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             _paisAplication = paisAplication;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        [HttpGet("GetPaises")]
+        public IActionResult GetPaises()
         {
-            var response = _paisAplication.GetAll();
+            var response = _paisAplication.GetPaises();
+            
+
             if (response.IsSuccess)
                 return Ok(response);
 

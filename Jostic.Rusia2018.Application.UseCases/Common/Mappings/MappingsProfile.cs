@@ -12,6 +12,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
             //Esta será usado por la capa de aplicación
             CreateMap<Grupo, GrupoDto>().ReverseMap();
             CreateMap<Pais, PaisDto>().ReverseMap();
+            CreateMap<Pais, GrupoDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
           
         }

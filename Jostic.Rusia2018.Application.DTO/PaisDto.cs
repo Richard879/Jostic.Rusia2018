@@ -5,6 +5,9 @@
         public int idPais { get; set; }
         public string nomPais { get; set; } = string.Empty;
 
-        public GrupoDto grupo = new GrupoDto();
+        public int idGrupo { get; set; }
+        public string descripcion { get; set; } = string.Empty;
+        
+        //public GrupoDto grupo = new GrupoDto();
     }
 }

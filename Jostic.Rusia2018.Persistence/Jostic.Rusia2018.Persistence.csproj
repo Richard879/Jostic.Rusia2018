@@ -7,14 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.1.24" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Jostic.Rusia2018.Application.DTO\Jostic.Rusia2018.Application.DTO.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Application.Interface\Jostic.Rusia2018.Application.Interface.csproj" />
+    <ProjectReference Include="..\Jostic.Rusia2018.Domain.Entity\Jostic.Rusia2018.Domain.Entity.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Common\Jostic.Rusia2018.Transversal.Common.csproj" />
   </ItemGroup>
 

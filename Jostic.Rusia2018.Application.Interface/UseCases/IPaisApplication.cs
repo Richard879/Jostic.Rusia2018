@@ -11,6 +11,7 @@ namespace Jostic.Rusia2018.Application.Interface.UseCases
         Response<bool> Delete(int idPais);
         Response<PaisDto> Get(int idPais);
         Response<IEnumerable<PaisDto>> GetAll();
+        Response<List<PaisDto>> GetPaises();
         ResponsePagination<IEnumerable<PaisDto>> GetAllWithPagination(int pageNumber, int pageSize);
         #endregion
 

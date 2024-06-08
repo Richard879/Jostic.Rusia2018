@@ -39,11 +39,24 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
 
         public Response<IEnumerable<PaisDto>> GetAll()
         {
-            var response = new Response<IEnumerable<PaisDto>>();
+            throw new NotImplementedException();
+        }
+
+        public Response<List<PaisDto>> GetPaises()
+        {
+            var response = new Response<List<PaisDto>>();
             try
             {
-                var pais = _unitOfWork.Pais.GetAll();
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(pais);
+                var pais = _unitOfWork.Pais.GetPaises().Select(p => new PaisDto
+                {
+                    idPais = p.idPais,
+                    nomPais = p.nomPais,
+                    idGrupo = p.grupo.idGrupo,
+                    descripcion = p.grupo.descripcion
+                }).ToList();
+
+                response.Data = _mapper.Map<List<PaisDto>>(pais);
+
                 if (response.Data != null)
                 {
                     response.IsSuccess = true;
