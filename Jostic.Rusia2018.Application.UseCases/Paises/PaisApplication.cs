@@ -21,13 +21,19 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             _logger = logger;
             _distributedCache = distributedCache;
         }
+        #region Métodos Síncronos
 
-        public Response<bool> Delete(int idPais)
+        public Response<bool> Insert(PaisDto paisDto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Response<bool>> DeleteAsync(int idPais)
+        public Response<bool> Update(PaisDto paisDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Response<bool> Delete(int idPais)
         {
             throw new NotImplementedException();
         }
@@ -72,17 +78,26 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             return response;
         }
 
-        public Task<Response<IEnumerable<PaisDto>>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public ResponsePagination<IEnumerable<PaisDto>> GetAllWithPagination(int pageNumber, int pageSize)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ResponsePagination<IEnumerable<PaisDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        #endregion
+
+        #region Métodos Asíncronos
+
+        public Task<Response<bool>> InsertAsync(PaisDto paisDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Response<bool>> UpdateAsync(PaisDto paisDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Response<bool>> DeleteAsync(int idPais)
         {
             throw new NotImplementedException();
         }
@@ -92,24 +107,47 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             throw new NotImplementedException();
         }
 
-        public Response<bool> Insert(PaisDto paisDto)
+        public Task<Response<IEnumerable<PaisDto>>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Response<bool>> InsertAsync(PaisDto paisDto)
+        public async Task<Response<List<PaisDto>>> GetPaisesAsync()
+        {
+            var response = new Response<List<PaisDto>>();
+            try
+            {
+                var pais = await _unitOfWork.Pais.GetPaisesAsync();
+                var paises = pais.Select(p => new PaisDto
+                {
+                    idPais = p.idPais,
+                    nomPais = p.nomPais,
+                    idGrupo = p.grupo.idGrupo,
+                    descripcion = p.grupo.descripcion
+                }).ToList();
+
+                response.Data = _mapper.Map<List<PaisDto>>(paises);
+
+                if (response.Data != null)
+                {
+                    response.IsSuccess = true;
+                    response.Message = "Consulta exitosa..!!";
+                    _logger.LogInformation("Consulta exitosa..!!");
+                }
+            }
+            catch (Exception e)
+            {
+                response.Message = e.Message;
+                _logger.LogError(e.Message);
+            }
+            return response;
+        }
+
+        public Task<ResponsePagination<IEnumerable<PaisDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
         {
             throw new NotImplementedException();
         }
 
-        public Response<bool> Update(PaisDto paisDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Response<bool>> UpdateAsync(PaisDto paisDto)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

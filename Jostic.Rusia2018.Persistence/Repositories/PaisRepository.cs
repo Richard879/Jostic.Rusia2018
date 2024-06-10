@@ -15,22 +15,18 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             _context = context;
         }
 
-        public int Count()
+        #region Métodos Síncronos
+        public bool Insert(Pais entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<int> CountAsync()
+        public bool Update(Pais entity)
         {
             throw new NotImplementedException();
         }
 
         public bool Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
@@ -44,15 +40,10 @@ namespace Jostic.Rusia2018.Persistence.Repositories
         {
             using (var connection = _context.CreateConnection())
             {
-                var query = "PaisList";
+                var query = "GrupoList";
 
-                var grupos = connection.Query<Pais, Grupo, Pais>(query, (country, group) => {
-                    country.grupo = group;
-                    return country;
-                },
-                splitOn: "idGrupo");
-
-                return grupos;
+                var paises = connection.Query<Pais>(query, commandType: CommandType.StoredProcedure);
+                return paises;
             }
         }
 
@@ -62,19 +53,14 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             {
                 var query = "PaisList";
 
-                var grupos = connection.Query<Pais, Grupo, Pais>(query, (country, group) => {
+                var paises = connection.Query<Pais, Grupo, Pais>(query, (country, group) => {
                     country.grupo = group;
                     return country;
                 },
                 splitOn: "idGrupo").ToList();
 
-                return grupos;
+                return paises;
             }
-        }
-
-        public Task<IEnumerable<Pais>> GetAllAsync()
-        {
-            throw new NotImplementedException();
         }
 
         public IEnumerable<Pais> GetAllWithPagination(int pageNumber, int pageSize)
@@ -82,7 +68,27 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Pais>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+
+        #region Métodos Asíncronos
+
+        public Task<bool> InsertAsync(Pais entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateAsync(Pais entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteAsync(int id)
         {
             throw new NotImplementedException();
         }
@@ -92,24 +98,37 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public bool Insert(Pais entity)
+        public Task<IEnumerable<Pais>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> InsertAsync(Pais entity)
+        public async Task<List<Pais>> GetPaisesAsync()
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "PaisList";
+
+                var paises = await connection.QueryAsync<Pais, Grupo, Pais>(query, (country, group) => {
+                    country.grupo = group;
+                    return country;
+                },
+                splitOn: "idGrupo");
+
+                return paises.ToList();
+            }
+        }
+
+        public Task<IEnumerable<Pais>> GetAllWithPaginationAsync(int pageNumber, int pageSize)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Pais entity)
+        public Task<int> CountAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateAsync(Pais entity)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

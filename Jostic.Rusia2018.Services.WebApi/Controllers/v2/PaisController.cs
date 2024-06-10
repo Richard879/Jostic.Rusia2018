@@ -18,6 +18,8 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             _paisAplication = paisAplication;
         }
 
+        #region Metodos Síncronos
+
         [HttpGet("GetPaises")]
         public IActionResult GetPaises()
         {
@@ -29,5 +31,24 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 
             return BadRequest(response.Message);
         }
+
+        #endregion
+
+        #region Metodos Asíncronos
+
+        [HttpGet("GetPaisesAsync")]
+        public async Task<IActionResult> GetPaisesAsync()
+        {
+            var response = await _paisAplication.GetPaisesAsync();
+
+
+            if (response.IsSuccess)
+                return Ok(response);
+
+            return BadRequest(response.Message);
+        }
+
+        #endregion
+
     }
 }
