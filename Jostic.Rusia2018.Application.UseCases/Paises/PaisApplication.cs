@@ -4,6 +4,7 @@ using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Transversal.Common;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.EntityFrameworkCore;
 
 namespace Jostic.Rusia2018.Application.UseCases.Paises
 {
