@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Application.DTO;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.CreateGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.UpdateGrupoCommand;
 
 namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
 {
@@ -14,7 +16,10 @@ namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
             CreateMap<Pais, PaisDto>().ReverseMap();
             CreateMap<Pais, GrupoDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
-          
+
+            CreateMap<Grupo, CreateGrupoCommand>().ReverseMap();
+            CreateMap<Grupo, UpdateGrupoCommand>().ReverseMap();
+
         }
     }
 }

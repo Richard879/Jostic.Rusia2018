@@ -12,6 +12,10 @@ namespace Jostic.Rusia2018.Application.UseCases
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            });
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IUsersApplication, UsersApplication>();
             services.AddScoped<IGrupoApplication, GrupoApplication>();

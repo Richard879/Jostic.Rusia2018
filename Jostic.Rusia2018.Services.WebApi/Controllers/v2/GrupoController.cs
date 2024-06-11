@@ -121,6 +121,18 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             return BadRequest(response.Message);
         }
 
+        [HttpDelete("DeleteAsync{idGrupo}")]
+        public async Task<IActionResult> DeleteAsync(int idGrupo)
+        {
+            if (idGrupo == 0)
+                return BadRequest();
+            var response = await _grupoAplication.DeleteAsync(idGrupo);
+            if (response.IsSuccess)
+                return Ok(response);
+
+            return BadRequest(response.Message);
+        }
+
         [HttpGet("GetAsync/{idGrupo}")]
         public async Task<IActionResult> GetAsync(int idGrupo)
         {

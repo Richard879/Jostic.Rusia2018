@@ -280,3 +280,7 @@ F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\StackExchange.Redis.dll
 F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\System.ClientModel.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\MediatR.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\MediatR.Contracts.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+F:\Richard\Py_Visual\Jostic.Rusia2018\Jostic.Rusia2018.Services.WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
