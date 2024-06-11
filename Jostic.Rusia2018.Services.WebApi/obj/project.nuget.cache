@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WR2TQFfFKHGqFg3/kuU2GUig4EaT6aPP5lDSejeUeyjoNtVfy4O3/sAzQYJJu0ezWX2p4gC7bxizysX/S7wgGQ==",
+  "dgSpecHash": "Op4AsIsIvThjywr5sRDr2r3z5AZAoad11ieGqPIKUNNZgtUfCBbHmEEPZueRj0OQqUbG7A5R6G+CYZpXsYpJ6A==",
   "success": true,
   "projectFilePath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Services.WebApi\\Jostic.Rusia2018.Services.WebApi.csproj",
   "expectedPackageFiles": [
@@ -81,12 +81,9 @@
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.1\\microsoft.data.sqlclient.5.2.1.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.2.0\\microsoft.data.sqlclient.sni.runtime.5.2.0.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
-    "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
-    "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.6\\microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",
-    "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.6\\microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.2.0\\microsoft.extensions.caching.memory.2.2.0.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\8.0.6\\microsoft.extensions.caching.stackexchangeredis.8.0.6.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\RICHARD\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
