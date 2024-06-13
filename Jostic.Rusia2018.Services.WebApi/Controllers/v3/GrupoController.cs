@@ -1,14 +1,12 @@
 ﻿using Asp.Versioning;
-using Jostic.Rusia2018.Application.DTO;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using MediatR;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.CreateGrupoCommand;
-using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.UpdateGrupoCommand;
-using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.DeleteGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.UpdateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllGrupoQuery;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllWithPaginationGrupoQuery;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Jostic.Rusia2018.Services.WebApi.Controllers.v3
 {
