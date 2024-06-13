@@ -2,6 +2,7 @@
 using Jostic.Rusia2018.Application.DTO;
 using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Application.Interface.UseCases;
+using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Transversal.Common;
 using Microsoft.Extensions.Caching.Distributed;
 
@@ -48,20 +49,26 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             throw new NotImplementedException();
         }
 
-        public Response<List<PaisDto>> GetPaises()
+        public Response<IEnumerable<PaisDto>> GetPaisesAll()
         {
-            var response = new Response<List<PaisDto>>();
+            var response = new Response<IEnumerable<PaisDto>>();
             try
             {
-                var pais = _unitOfWork.Pais.GetPaises().Select(p => new PaisDto
+                var pais = _unitOfWork.Pais.GetPaisesAll();
+
+                var paises = pais.Select(p => new PaisDto
                 {
                     idPais = p.idPais,
                     nomPais = p.nomPais,
                     idGrupo = p.grupo.idGrupo,
-                    descripcion = p.grupo.descripcion
+                    descripcion = p.grupo.descripcion,
+                    idContinente = p.continente.idContinente,
+                    nomContinente = p.continente.descripcion,
+                    idTecnico = p.tecnico.idTecnico,
+                    nomTecnico = p.tecnico.nomTecnico
                 }).ToList();
 
-                response.Data = _mapper.Map<List<PaisDto>>(pais);
+                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paises);
 
                 if (response.Data != null)
                 {
@@ -112,21 +119,25 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             throw new NotImplementedException();
         }
 
-        public async Task<Response<List<PaisDto>>> GetPaisesAsync()
+        public async Task<Response<IEnumerable<PaisDto>>> GetPaisesAllAsync()
         {
-            var response = new Response<List<PaisDto>>();
+            var response = new Response<IEnumerable<PaisDto>>();
             try
             {
-                var pais = await _unitOfWork.Pais.GetPaisesAsync();
+                var pais = await _unitOfWork.Pais.GetPaisesAllAsync();
                 var paises = pais.Select(p => new PaisDto
                 {
                     idPais = p.idPais,
                     nomPais = p.nomPais,
                     idGrupo = p.grupo.idGrupo,
-                    descripcion = p.grupo.descripcion
+                    descripcion = p.grupo.descripcion,
+                    idContinente = p.continente.idContinente,
+                    nomContinente = p.continente.descripcion,
+                    idTecnico = p.tecnico.idTecnico,
+                    nomTecnico = p.tecnico.nomTecnico
                 }).ToList();
 
-                response.Data = _mapper.Map<List<PaisDto>>(paises);
+                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paises);
 
                 if (response.Data != null)
                 {

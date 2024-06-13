@@ -47,17 +47,19 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             }
         }
 
-        public List<Pais> GetPaises()
+        public IEnumerable<Pais> GetPaisesAll()
         {
             using (var connection = _context.CreateConnection())
             {
-                var query = "PaisList";
+                var query = "PaisListAll";
 
-                var paises = connection.Query<Pais, Grupo, Pais>(query, (country, group) => {
+                var paises = connection.Query<Pais, Grupo, Continente, Tecnico, Pais>(query, (country, group, continent, technical) => {
                     country.grupo = group;
+                    country.continente = continent;
+                    country.tecnico = technical;
                     return country;
                 },
-                splitOn: "idGrupo").ToList();
+                splitOn: "descripcion, idGrupo, idContinente, idTecnico").ToList();
 
                 return paises;
             }
@@ -103,17 +105,19 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<List<Pais>> GetPaisesAsync()
+        public async Task<IEnumerable<Pais>> GetPaisesAllAsync()
         {
             using (var connection = _context.CreateConnection())
             {
-                var query = "PaisList";
+                var query = "PaisListAll";
 
-                var paises = await connection.QueryAsync<Pais, Grupo, Pais>(query, (country, group) => {
+                var paises = await connection.QueryAsync<Pais, Grupo, Continente, Tecnico, Pais>(query, (country, group, continent, technical) => {
                     country.grupo = group;
+                    country.continente = continent;
+                    country.tecnico = technical;
                     return country;
                 },
-                splitOn: "idGrupo");
+                splitOn: "descripcion, idGrupo, idContinente, idTecnico");
 
                 return paises.ToList();
             }

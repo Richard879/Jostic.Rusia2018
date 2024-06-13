@@ -8,6 +8,14 @@
         public int idGrupo { get; set; }
         public string descripcion { get; set; } = string.Empty;
         
+        public int idContinente { get; set; }
+
+        public string nomContinente { get; set; } = string.Empty;
+
+        public int idTecnico { get; set; }
+
+        public string nomTecnico { get; set; } = string.Empty;
+
         //public GrupoDto grupo = new GrupoDto();
     }
 }

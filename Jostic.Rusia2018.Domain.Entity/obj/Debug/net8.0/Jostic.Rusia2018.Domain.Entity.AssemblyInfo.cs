@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jostic.Rusia2018.Domain.Entity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3504928d66dff5ead90bedfb51fab443325e8e63")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jostic.Rusia2018.Domain.Entity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jostic.Rusia2018.Domain.Entity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

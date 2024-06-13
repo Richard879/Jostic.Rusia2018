@@ -20,10 +20,10 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 
         #region Metodos Síncronos
 
-        [HttpGet("GetPaises")]
-        public IActionResult GetPaises()
+        [HttpGet("GetPaisesAll")]
+        public IActionResult GetPaisesAll()
         {
-            var response = _paisAplication.GetPaises();
+            var response = _paisAplication.GetPaisesAll();
             
 
             if (response.IsSuccess)
@@ -36,10 +36,10 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 
         #region Metodos Asíncronos
 
-        [HttpGet("GetPaisesAsync")]
-        public async Task<IActionResult> GetPaisesAsync()
+        [HttpGet("GetPaisesAllAsync")]
+        public async Task<IActionResult> GetPaisesAllAsync()
         {
-            var response = await _paisAplication.GetPaisesAsync();
+            var response = await _paisAplication.GetPaisesAllAsync();
 
 
             if (response.IsSuccess)

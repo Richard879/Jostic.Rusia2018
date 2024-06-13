@@ -11,7 +11,7 @@ namespace Jostic.Rusia2018.Application.Interface.UseCases
         Response<bool> Delete(int idPais);
         Response<PaisDto> Get(int idPais);
         Response<IEnumerable<PaisDto>> GetAll();
-        Response<List<PaisDto>> GetPaises();
+        Response<IEnumerable<PaisDto>> GetPaisesAll();
         ResponsePagination<IEnumerable<PaisDto>> GetAllWithPagination(int pageNumber, int pageSize);
         #endregion
 
@@ -21,7 +21,7 @@ namespace Jostic.Rusia2018.Application.Interface.UseCases
         Task<Response<bool>> DeleteAsync(int idPais);
         Task<Response<PaisDto>> GetAsync(int idPais);
         Task<Response<IEnumerable<PaisDto>>> GetAllAsync();
-        Task<Response<List<PaisDto>>> GetPaisesAsync();
+        Task<Response<IEnumerable<PaisDto>>> GetPaisesAllAsync();
         Task<ResponsePagination<IEnumerable<PaisDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
         #endregion
     }
