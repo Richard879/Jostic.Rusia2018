@@ -3,6 +3,7 @@ using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Application.DTO;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.CreateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.UpdateGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllFilter;
 
 namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
 {
@@ -16,9 +17,12 @@ namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
             CreateMap<Pais, PaisDto>().ReverseMap();
             CreateMap<Pais, GrupoDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<Continente, ContinenteDto>().ReverseMap();
+            CreateMap<Tecnico, TecnicoDto>().ReverseMap();
 
             CreateMap<Grupo, CreateGrupoCommand>().ReverseMap();
             CreateMap<Grupo, UpdateGrupoCommand>().ReverseMap();
+            CreateMap<Pais, GetPaisesAllFilterQuery>().ReverseMap();
 
         }
     }
