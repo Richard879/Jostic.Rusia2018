@@ -3,6 +3,7 @@ using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Persistence.Context;
 using System.Data;
 using Dapper;
+using System.Linq;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
@@ -143,7 +144,14 @@ namespace Jostic.Rusia2018.Persistence.Repositories
                 },
                 splitOn: "descripcion, idGrupo, idContinente, idTecnico");
 
-                return paises.ToList();
+                var filter = paises.Where(p => p.idPais == entity.idPais || 
+                                            p.nomPais == entity.nomPais || 
+                                            p.grupo.idGrupo == entity.grupo.idGrupo ||
+                                            p.grupo.descripcion == entity.grupo.descripcion  ||
+                                            p.tecnico.idTecnico == entity.tecnico.idTecnico ||
+                                            p.tecnico.nomTecnico == entity.tecnico.nomTecnico).ToList();
+
+                return filter;
             }
         }
 

@@ -1,6 +1,9 @@
 ﻿using Asp.Versioning;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery;
 using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetAllQuery;
+using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllFilter;
 using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllQuery;
+using Jostic.Rusia2018.Domain.Entity;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,6 +41,16 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v3
             var response = await _mediator.Send(new GetPaisesAllQuery());
 
 
+            if (response.IsSuccess)
+                return Ok(response);
+
+            return BadRequest(response.Message);
+        }
+
+        [HttpGet("GetPaisesAllFilter")]
+        public async Task<IActionResult> GetPaisesAllFilter([FromBody] GetPaisesAllFilterQuery command)
+        {
+            var response = await _mediator.Send(command);
             if (response.IsSuccess)
                 return Ok(response);
 
