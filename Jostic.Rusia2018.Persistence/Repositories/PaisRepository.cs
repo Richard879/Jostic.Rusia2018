@@ -104,7 +104,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
         {
             using (var connection = _context.CreateConnection())
             {
-                var query = "GrupoList";
+                var query = "PaisList";
 
                 var paises = await connection.QueryAsync<Pais>(query, commandType: CommandType.StoredProcedure);
                 return paises;
