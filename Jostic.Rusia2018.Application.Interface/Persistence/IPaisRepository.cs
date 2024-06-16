@@ -6,5 +6,6 @@ namespace Jostic.Rusia2018.Application.Interface.Persistence
     {
         IEnumerable<Pais> GetPaisesAll();
         Task<IEnumerable<Pais>> GetPaisesAllAsync();
+        Task<IEnumerable<Pais>> GetPaisesAllFiltro(Pais entity);
     }
 }

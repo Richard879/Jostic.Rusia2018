@@ -100,12 +100,36 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Pais>> GetAllAsync()
+        public async Task<IEnumerable<Pais>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "GrupoList";
+
+                var paises = await connection.QueryAsync<Pais>(query, commandType: CommandType.StoredProcedure);
+                return paises;
+            }
         }
 
         public async Task<IEnumerable<Pais>> GetPaisesAllAsync()
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "PaisListAll";
+
+                var paises = await connection.QueryAsync<Pais, Grupo, Continente, Tecnico, Pais>(query, (country, group, continent, technical) => {
+                    country.grupo = group;
+                    country.continente = continent;
+                    country.tecnico = technical;
+                    return country;
+                },
+                splitOn: "descripcion, idGrupo, idContinente, idTecnico");
+
+                return paises.ToList();
+            }
+        }
+
+        public async Task<IEnumerable<Pais>> GetPaisesAllFiltro(Pais entity)
         {
             using (var connection = _context.CreateConnection())
             {

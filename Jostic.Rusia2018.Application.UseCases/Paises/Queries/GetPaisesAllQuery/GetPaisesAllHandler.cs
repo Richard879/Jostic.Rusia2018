@@ -5,7 +5,7 @@ using Jostic.Rusia2018.Transversal.Common;
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace Jostic.Rusia2018.Application.UseCases.Paises.Queries
+namespace Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllQuery
 {
     public class GetPaisesAllHandler : IRequestHandler<GetPaisesAllQuery, Response<IEnumerable<PaisDto>>>
     {

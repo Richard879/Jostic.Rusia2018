@@ -11,12 +11,12 @@ using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Services.WebApi.Helpers;
 using Jostic.Rusia2018.Transversal.Common;
 
-namespace Jostic.Rusia2018.Services.WebApi.Controllers.v1
+namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 {
     [Authorize]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [ApiVersion("1.0", Deprecated = true)]
+    [ApiVersion("1.0")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersApplication _usersApplication;

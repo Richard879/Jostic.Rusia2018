@@ -1,46 +1,51 @@
 ﻿using Asp.Versioning;
-using Jostic.Rusia2018.Application.DTO;
-using Jostic.Rusia2018.Application.Interface.UseCases;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.CreateGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.DeleteGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Commands.UpdateGrupoCommand;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllGrupoQuery;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllWithPaginationGrupoQuery;
+using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
-namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
+namespace Jostic.Rusia2018.Services.WebApi.Controllers.v3
 {
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("2.0")]
     public class GrupoController : ControllerBase
     {
-        private readonly IGrupoApplication _grupoAplication;
 
-        public GrupoController(IGrupoApplication grupoAplication)
+        private readonly IMediator _mediator;
+
+        public GrupoController(IMediator mediator)
         {
-            _grupoAplication = grupoAplication;
+            _mediator = mediator;
         }
 
-        #region Metodos Síncronos
+        #region Metodos Asíncronos
         [HttpPost("Insert")]
-        public IActionResult Insert([FromBody] GrupoDto grupoDTO)
+        public async Task<IActionResult> Insert([FromBody] CreateGrupoCommand command)
         {
-            if (grupoDTO == null)
+            if (command == null)
                 return BadRequest();
-            var response = _grupoAplication.Insert(grupoDTO);
+            var response = await _mediator.Send(command);
             if (response.IsSuccess)
                 return Ok(response);
 
-           return BadRequest(response.Message);
+            return BadRequest(response.Message);
         }
 
         [HttpPut("Update/{idGrupo}")]
-        public IActionResult Update(int idGrupo, [FromBody] GrupoDto grupoDTO)
+        public async Task<IActionResult> Update(int idGrupo, [FromBody] UpdateGrupoCommand command)
         {
-            var groupDTO = _grupoAplication.Get(idGrupo);
-            if (groupDTO.Data == null)
-                return NotFound(groupDTO.Message);
+            var customerDto = await _mediator.Send(new GetGrupoQuery() { idGrupo = idGrupo});
+            if (customerDto.Data == null)
+                return NotFound(customerDto.Message);
 
-            if (grupoDTO == null)
+            if (command == null)
                 return BadRequest();
-            var response = _grupoAplication.Update(grupoDTO);
+            var response = await _mediator.Send(command);
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -48,23 +53,23 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpDelete("Delete{idGrupo}")]
-        public IActionResult Delete(int idGrupo)
+        public async Task<IActionResult> Delete([FromRoute]  int idGrupo)
         {
             if (idGrupo == 0)
                 return BadRequest();
-            var response = _grupoAplication.Delete(idGrupo);
+            var response = await _mediator.Send(new DeleteGrupoCommand() { idGrupo = idGrupo });
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
 
-        [HttpGet("Get{idGrupo}")]
-        public IActionResult Get(int idGrupo)
+        [HttpGet("Get/{idGrupo}")]
+        public async Task<IActionResult> Get(int idGrupo)
         {
             if (idGrupo == 0)
                 return BadRequest();
-            var response = _grupoAplication.Get(idGrupo);
+            var response = await _mediator.Send(new GetGrupoQuery() { idGrupo = idGrupo });
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -72,9 +77,9 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var response = _grupoAplication.GetAll();
+            var response = await _mediator.Send(new GetAllGrupoQuery());
             if (response.IsSuccess)
                 return Ok(response);
 
@@ -82,90 +87,14 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpGet("GetAllWithPagination")]
-        public IActionResult GetAllWithPagination([FromQuery] int pageNumber, int pageSize)
+        public async Task<IActionResult> GetAllWithPagination([FromQuery] int pageNumber, int pageSize)
         {
-            var response = _grupoAplication.GetAllWithPagination(pageNumber, pageSize);
+            var response = await _mediator.Send(new GetAllWithPaginationGrupoQuery() { PageNumber = pageNumber, PageSize = pageSize } );
             if (response.IsSuccess)
                 return Ok(response);
 
             return BadRequest(response.Message);
         }
         #endregion
-
-        #region Metodos Asíncronos
-        [HttpPost("InsertAsync")]
-        public async Task<IActionResult> InsertAsync([FromBody] GrupoDto grupoDTO)
-        {
-            if (grupoDTO == null)
-                return BadRequest();
-            var response = await _grupoAplication.InsertAsync(grupoDTO);
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-
-        [HttpPut("UpdateAsync/{idGrupo}")]
-        public async Task<IActionResult> UpdateAsync(int idGrupo, [FromBody] GrupoDto grupoDTO)
-        {
-            var customerDto = await _grupoAplication.GetAsync(idGrupo);
-            if (customerDto.Data == null)
-                return NotFound(customerDto.Message);
-
-            if (grupoDTO == null)
-                return BadRequest();
-            var response = await _grupoAplication.UpdateAsync(grupoDTO);
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-
-        [HttpDelete("DeleteAsync{idGrupo}")]
-        public async Task<IActionResult> DeleteAsync(int idGrupo)
-        {
-            if (idGrupo == 0)
-                return BadRequest();
-            var response = await _grupoAplication.DeleteAsync(idGrupo);
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-
-        [HttpGet("GetAsync/{idGrupo}")]
-        public async Task<IActionResult> GetAsync(int idGrupo)
-        {
-            if (idGrupo == 0)
-                return BadRequest();
-            var response = await _grupoAplication.GetAsync(idGrupo);
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-
-        [HttpGet("GetAllAsync")]
-        public async Task<IActionResult> GetAllAsync()
-        {
-            var response = await _grupoAplication.GetAllAsync();
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-
-        [HttpGet("GetAllWithPaginationAsync")]
-        public async Task<IActionResult> GetAllWithPaginationAsync([FromQuery] int pageNumber, int pageSize)
-        {
-            var response = await _grupoAplication.GetAllWithPaginationAsync(pageNumber, pageSize);
-            if (response.IsSuccess)
-                return Ok(response);
-
-            return BadRequest(response.Message);
-        }
-        #endregion
-
-
     }
 }

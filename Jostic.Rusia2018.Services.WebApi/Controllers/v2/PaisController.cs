@@ -1,30 +1,30 @@
 ﻿using Asp.Versioning;
-using Jostic.Rusia2018.Application.Interface.UseCases;
-using Jostic.Rusia2018.Application.UseCases.Grupos;
-using Microsoft.AspNetCore.Http;
+using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetAllQuery;
+using Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllQuery;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
+namespace Jostic.Rusia2018.Services.WebApi.Controllers.v3
 {
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("2.0")]
     public class PaisController : ControllerBase
     {
-        private readonly IPaisApplication _paisAplication;
+        private readonly IMediator _mediator;
 
-        public PaisController(IPaisApplication paisAplication)
+        public PaisController(IMediator mediator)
         {
-            _paisAplication = paisAplication;
+            _mediator = mediator;
         }
 
-        #region Metodos Síncronos
+        #region Metodos Asíncronos
 
-        [HttpGet("GetPaisesAll")]
-        public IActionResult GetPaisesAll()
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
         {
-            var response = _paisAplication.GetPaisesAll();
-            
+            var response = await _mediator.Send(new GetAllPaisQuery());
+
 
             if (response.IsSuccess)
                 return Ok(response);
@@ -32,14 +32,10 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             return BadRequest(response.Message);
         }
 
-        #endregion
-
-        #region Metodos Asíncronos
-
-        [HttpGet("GetPaisesAllAsync")]
-        public async Task<IActionResult> GetPaisesAllAsync()
+        [HttpGet("GetPaisesAll")]
+        public async Task<IActionResult> GetPaisesAll()
         {
-            var response = await _paisAplication.GetPaisesAllAsync();
+            var response = await _mediator.Send(new GetPaisesAllQuery());
 
 
             if (response.IsSuccess)
