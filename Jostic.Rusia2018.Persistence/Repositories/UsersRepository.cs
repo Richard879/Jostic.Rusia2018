@@ -1,8 +1,8 @@
 ﻿using Dapper;
-using System.Data;
 using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Persistence.Context;
+using System.Data;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
@@ -15,7 +15,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             _context = context;
         }
 
-        public User Authenticate(string username, string password)
+        public async Task<User> Authenticate(string username, string password)
         {
             using (var connection = _context.CreateConnection())
             {
@@ -24,7 +24,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
                 parameters.Add("UserName", username);
                 parameters.Add("Password", password);
 
-                var user = connection.QuerySingle<User>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                var user = await connection.QuerySingleOrDefaultAsync<User>(query, param: parameters, commandType: CommandType.StoredProcedure);
                 return user;
             }
         }
