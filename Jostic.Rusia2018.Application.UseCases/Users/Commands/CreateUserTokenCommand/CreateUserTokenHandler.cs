@@ -4,14 +4,14 @@ using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Transversal.Common;
 using MediatR;
 
-namespace Jostic.Rusia2018.Application.UseCases.Users.Queries.GetUserTokenQuery
+namespace Jostic.Rusia2018.Application.UseCases.Users.Commands.CreateUserTokenCommand
 {
-    public class GetUserTokenHandler : IRequestHandler<GetUserTokenQuery, Response<UserDto>>
+    public class CreateUserTokenHandler : IRequestHandler<CreateUserTokenQuery, Response<UserDto>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public GetUserTokenHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public CreateUserTokenHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -19,7 +19,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Users.Queries.GetUserTokenQuery
 
         //private readonly UserDtoValidator _validator;
 
-        public async Task<Response<UserDto>> Handle(GetUserTokenQuery request, CancellationToken cancellationToken)
+        public async Task<Response<UserDto>> Handle(CreateUserTokenQuery request, CancellationToken cancellationToken)
         {
             var response = new Response<UserDto>();
             var user = await _unitOfWork.Users.Authenticate(request.UserName, request.Password);
@@ -37,5 +37,6 @@ namespace Jostic.Rusia2018.Application.UseCases.Users.Queries.GetUserTokenQuery
 
             return response;
         }
+
     }
 }

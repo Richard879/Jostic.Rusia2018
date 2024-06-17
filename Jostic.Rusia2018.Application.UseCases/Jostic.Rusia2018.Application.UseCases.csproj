@@ -26,8 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Paises\Commands\" />
-    <Folder Include="Users\Commands\CreateUserTokenCommand\" />
-    <Folder Include="Users\Commands\" />
   </ItemGroup>
 
 </Project>
