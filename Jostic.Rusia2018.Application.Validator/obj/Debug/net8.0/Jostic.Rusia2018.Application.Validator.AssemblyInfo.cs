@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jostic.Rusia2018.Application.Validator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e93f8733f56e33c359f6ee691d1352e7aaae061")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f53a9f52368c44bcabf108d6295b791d2b909f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jostic.Rusia2018.Application.Validator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jostic.Rusia2018.Application.Validator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

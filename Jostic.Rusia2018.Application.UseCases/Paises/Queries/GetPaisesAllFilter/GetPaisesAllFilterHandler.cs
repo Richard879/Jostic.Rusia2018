@@ -30,19 +30,8 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllFilte
             {
                 var pais = _mapper.Map<Pais>(request);
                 var paisDto = await _unitOfWork.Pais.GetPaisesAllFiltro(pais);
-                var respuesta = paisDto.Select(p => new PaisDto
-                {
-                    idPais = p.idPais,
-                    nomPais = p.nomPais,
-                    idGrupo = p.grupo.idGrupo,
-                    descripcion = p.grupo.descripcion,
-                    idContinente = p.continente.idContinente,
-                    nomContinente = p.continente.descripcion,
-                    idTecnico = p.tecnico.idTecnico,
-                    nomTecnico = p.tecnico.nomTecnico
-                }).ToList();
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(respuesta);
+                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
                 if (response.Data != null)
                 {

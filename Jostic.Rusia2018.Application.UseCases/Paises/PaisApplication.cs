@@ -54,21 +54,9 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             var response = new Response<IEnumerable<PaisDto>>();
             try
             {
-                var pais = _unitOfWork.Pais.GetPaisesAll();
+                var paisDto = _unitOfWork.Pais.GetPaisesAll();
 
-                var paises = pais.Select(p => new PaisDto
-                {
-                    idPais = p.idPais,
-                    nomPais = p.nomPais,
-                    idGrupo = p.grupo.idGrupo,
-                    descripcion = p.grupo.descripcion,
-                    idContinente = p.continente.idContinente,
-                    nomContinente = p.continente.descripcion,
-                    idTecnico = p.tecnico.idTecnico,
-                    nomTecnico = p.tecnico.nomTecnico
-                }).ToList();
-
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paises);
+                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
                 if (response.Data != null)
                 {
@@ -124,8 +112,8 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
             var response = new Response<IEnumerable<PaisDto>>();
             try
             {
-                var pais = await _unitOfWork.Pais.GetPaisesAllAsync();
-                var paises = pais.Select(p => new PaisDto
+                var paisDto = await _unitOfWork.Pais.GetPaisesAllAsync();
+                /*var paises = pais.Select(p => new PaisDto
                 {
                     idPais = p.idPais,
                     nomPais = p.nomPais,
@@ -135,9 +123,9 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
                     nomContinente = p.continente.descripcion,
                     idTecnico = p.tecnico.idTecnico,
                     nomTecnico = p.tecnico.nomTecnico
-                }).ToList();
+                }).ToList();*/
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paises);
+                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
                 if (response.Data != null)
                 {
