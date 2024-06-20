@@ -5,8 +5,9 @@ using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Transversal.Common;
 using Microsoft.Extensions.Caching.Distributed;
-using System.Text.Json;
+using Microsoft.Extensions.Logging;
 using System.Text;
+using System.Text.Json;
 
 namespace Jostic.Rusia2018.Application.UseCases.Grupos
 {
@@ -14,10 +15,11 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly IAppLogger<GrupoApplication> _logger;
+        //private readonly IAppLogger<GrupoApplication> _logger;
+        private readonly ILogger<GrupoApplication> _logger;
         private readonly IDistributedCache _distributedCache;
 
-        public GrupoApplication(IUnitOfWork unitOfWork, IMapper mapper, IAppLogger<GrupoApplication> logger, IDistributedCache distributedCache)
+        public GrupoApplication(IUnitOfWork unitOfWork, IMapper mapper, ILogger<GrupoApplication> logger, IDistributedCache distributedCache)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
