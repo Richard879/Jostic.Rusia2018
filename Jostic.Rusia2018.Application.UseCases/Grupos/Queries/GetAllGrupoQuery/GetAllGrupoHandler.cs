@@ -30,43 +30,35 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllGrupoQuery
             var cacheKey = "grupoList";
             TimeSpan? slidingExpiration = null;
 
-            try
+            var redisGrupo = await _distributedCache.GetAsync(cacheKey);
+            if (redisGrupo != null)
             {
-                var redisGrupo = await _distributedCache.GetAsync(cacheKey);
-                if (redisGrupo != null)
-                {
-                    response.Data = JsonSerializer.Deserialize<IEnumerable<GrupoDto>>(redisGrupo);
-                }
-                else
-                {
-                    var grupos = await _unitOfWork.Grupo.GetAllAsync();
-                    response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
-                    if (response.Data != null)
-                    {
-                        var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
-                        var cacheEntryOptions = new DistributedCacheEntryOptions
-                        {
-                            SlidingExpiration = slidingExpiration ?? TimeSpan.FromMinutes(30)
-                        };
-                        /*var options = new DistributedCacheEntryExtensions()
-                            .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))
-                        .SetSlidingExpiration(DateTime.Now.AddSeconds(5));*/
-
-                        await _distributedCache.SetAsync(cacheKey, serializerGrupo, cacheEntryOptions);
-                    }
-                }
-
+                response.Data = JsonSerializer.Deserialize<IEnumerable<GrupoDto>>(redisGrupo);
+            }
+            else
+            {
+                var grupos = await _unitOfWork.Grupo.GetAllAsync();
+                response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
                 if (response.Data != null)
                 {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                    _logger.LogInformation("Consulta exitosa..!!");
+                    var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
+                    var cacheEntryOptions = new DistributedCacheEntryOptions
+                    {
+                        SlidingExpiration = slidingExpiration ?? TimeSpan.FromMinutes(30)
+                    };
+                    /*var options = new DistributedCacheEntryExtensions()
+                        .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))
+                    .SetSlidingExpiration(DateTime.Now.AddSeconds(5));*/
+
+                    await _distributedCache.SetAsync(cacheKey, serializerGrupo, cacheEntryOptions);
                 }
             }
-            catch (Exception e)
+
+            if (response.Data != null)
             {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
+                _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }

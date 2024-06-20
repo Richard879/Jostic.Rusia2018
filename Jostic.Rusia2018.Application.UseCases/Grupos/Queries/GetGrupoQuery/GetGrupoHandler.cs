@@ -23,19 +23,12 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery
         public async Task<Response<GrupoDto>> Handle(GetGrupoQuery request, CancellationToken cancellationToken)
         {
             var response = new Response<GrupoDto>();
-            try
+            var grupo = await _unitOfWork.Grupo.GetAsync(request.idGrupo);
+            response.Data = _mapper.Map<GrupoDto>(grupo);
+            if (response.Data != null)
             {
-                var grupo = await _unitOfWork.Grupo.GetAsync(request.idGrupo);
-                response.Data = _mapper.Map<GrupoDto>(grupo);
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                }
-            }
-            catch (Exception e)
-            {
-                response.Message = e.Message;
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
             }
             return response;
         }

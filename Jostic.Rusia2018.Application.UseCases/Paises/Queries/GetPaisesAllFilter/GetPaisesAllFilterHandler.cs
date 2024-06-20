@@ -26,24 +26,16 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetPaisesAllFilte
         public async Task<Response<IEnumerable<PaisDto>>> Handle(GetPaisesAllFilterQuery request, CancellationToken cancellationToken)
         {
             var response = new Response<IEnumerable<PaisDto>>();
-            try
-            {
-                var pais = _mapper.Map<Pais>(request);
-                var paisDto = await _unitOfWork.Pais.GetPaisesAllFiltro(pais);
+            var pais = _mapper.Map<Pais>(request);
+            var paisDto = await _unitOfWork.Pais.GetPaisesAllFiltro(pais);
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
+            response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                    _logger.LogInformation("Consulta exitosa..!!");
-                }
-            }
-            catch (Exception e)
+            if (response.Data != null)
             {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
+                _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }

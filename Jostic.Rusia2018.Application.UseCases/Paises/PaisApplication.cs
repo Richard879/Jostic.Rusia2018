@@ -52,23 +52,15 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
         public Response<IEnumerable<PaisDto>> GetPaisesAll()
         {
             var response = new Response<IEnumerable<PaisDto>>();
-            try
-            {
-                var paisDto = _unitOfWork.Pais.GetPaisesAll();
+            var paisDto = _unitOfWork.Pais.GetPaisesAll();
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
+            response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                    _logger.LogInformation("Consulta exitosa..!!");
-                }
-            }
-            catch (Exception e)
+            if (response.Data != null)
             {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
+                _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }
@@ -110,34 +102,26 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises
         public async Task<Response<IEnumerable<PaisDto>>> GetPaisesAllAsync()
         {
             var response = new Response<IEnumerable<PaisDto>>();
-            try
+            var paisDto = await _unitOfWork.Pais.GetPaisesAllAsync();
+            /*var paises = pais.Select(p => new PaisDto
             {
-                var paisDto = await _unitOfWork.Pais.GetPaisesAllAsync();
-                /*var paises = pais.Select(p => new PaisDto
-                {
-                    idPais = p.idPais,
-                    nomPais = p.nomPais,
-                    idGrupo = p.grupo.idGrupo,
-                    descripcion = p.grupo.descripcion,
-                    idContinente = p.continente.idContinente,
-                    nomContinente = p.continente.descripcion,
-                    idTecnico = p.tecnico.idTecnico,
-                    nomTecnico = p.tecnico.nomTecnico
-                }).ToList();*/
+                idPais = p.idPais,
+                nomPais = p.nomPais,
+                idGrupo = p.grupo.idGrupo,
+                descripcion = p.grupo.descripcion,
+                idContinente = p.continente.idContinente,
+                nomContinente = p.continente.descripcion,
+                idTecnico = p.tecnico.idTecnico,
+                nomTecnico = p.tecnico.nomTecnico
+            }).ToList();*/
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
+            response.Data = _mapper.Map<IEnumerable<PaisDto>>(paisDto);
 
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                    _logger.LogInformation("Consulta exitosa..!!");
-                }
-            }
-            catch (Exception e)
+            if (response.Data != null)
             {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
+                _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }

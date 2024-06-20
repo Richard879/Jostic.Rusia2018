@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jostic.Rusia2018.Application.UseCases")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf248ff93b5c6a8046c65f924c58c7e647ce1d19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af62129e570a2aa1bb48d26731e37d744b75ed7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jostic.Rusia2018.Application.UseCases")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jostic.Rusia2018.Application.UseCases")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

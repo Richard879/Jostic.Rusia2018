@@ -25,23 +25,15 @@ namespace Jostic.Rusia2018.Application.UseCases.Paises.Queries.GetAllQuery
         public async Task<Response<IEnumerable<PaisDto>>> Handle(GetAllPaisQuery request, CancellationToken cancellationToken)
         {
             var response = new Response<IEnumerable<PaisDto>>();
-            try
-            {
-                var pais = await _unitOfWork.Pais.GetAllAsync();
+            var pais = await _unitOfWork.Pais.GetAllAsync();
 
-                response.Data = _mapper.Map<IEnumerable<PaisDto>>(pais);
+            response.Data = _mapper.Map<IEnumerable<PaisDto>>(pais);
 
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = "Consulta exitosa..!!";
-                    _logger.LogInformation("Consulta exitosa..!!");
-                }
-            }
-            catch (Exception e)
+            if (response.Data != null)
             {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.IsSuccess = true;
+                response.Message = "Consulta exitosa..!!";
+                _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }

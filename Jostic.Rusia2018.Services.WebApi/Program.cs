@@ -8,6 +8,7 @@ using Jostic.Rusia2018.Services.WebApi.Modules.Swagger;
 using Jostic.Rusia2018.Services.WebApi.Modules.Validator;
 using Jostic.Rusia2018.Services.WebApi.Modules.Versioning;
 using Jostic.Rusia2018.Services.WebApi.Modules.Redis;
+using Jostic.Rusia2018.Services.WebApi.Modules.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +55,7 @@ app.UseCors("policyApiEcommerce");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.AddMiddleware();
 //app.UseOutputCache();
 
 /*app.UseWatchDog(conf =>

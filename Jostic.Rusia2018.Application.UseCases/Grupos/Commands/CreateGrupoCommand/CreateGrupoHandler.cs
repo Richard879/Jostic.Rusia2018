@@ -23,20 +23,13 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Commands.CreateGrupoComma
         public async Task<Response<bool>> Handle(CreateGrupoCommand request, CancellationToken cancellationToken)
         {
             var response = new Response<bool>();
-            try
+            var grupo = _mapper.Map<Grupo>(request);
+            response.Data = await _unitOfWork.Grupo.InsertAsync(grupo);
+            if (response.Data)
             {
-                var grupo = _mapper.Map<Grupo>(request);
-                response.Data = await _unitOfWork.Grupo.InsertAsync(grupo);
-                if (response.Data)
-                {
-                    await _distributedCache.RemoveAsync("grupoList");
-                    response.IsSuccess = true;
-                    response.Message = "Registro exitoso..!!";
-                }
-            }
-            catch (Exception e)
-            {
-                response.Message = e.Message;
+                await _distributedCache.RemoveAsync("grupoList");
+                response.IsSuccess = true;
+                response.Message = "Registro exitoso..!!";
             }
             return response;
         }

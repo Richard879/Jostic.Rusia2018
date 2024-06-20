@@ -31,6 +31,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             _mediator = mediator;
         }
 
+        #region Metodos Asíncronos
         [AllowAnonymous]
         [HttpPost("Authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] CreateUserTokenQuery command)
@@ -99,6 +100,6 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
             var tokenString = tokenHandler.WriteToken(token);
             return tokenString;
         }
-
+        #endregion
     }
 }

@@ -25,24 +25,16 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllWithPaginat
         public async Task<ResponsePagination<IEnumerable<GrupoDto>>> Handle(GetAllWithPaginationGrupoQuery request, CancellationToken cancellationToken)
         {
             var response = new ResponsePagination<IEnumerable<GrupoDto>>();
-            try
+            var count = await _unitOfWork.Grupo.CountAsync();
+            var customers = await _unitOfWork.Grupo.GetAllWithPaginationAsync(request.PageNumber, request.PageSize);
+            response.Data = _mapper.Map<IEnumerable<GrupoDto>>(customers);
+            if (response.Data != null)
             {
-                var count = await _unitOfWork.Grupo.CountAsync();
-                var customers = await _unitOfWork.Grupo.GetAllWithPaginationAsync(request.PageNumber, request.PageSize);
-                response.Data = _mapper.Map<IEnumerable<GrupoDto>>(customers);
-                if (response.Data != null)
-                {
-                    response.PageNumer = request.PageNumber;
-                    response.TotalPages = (int)Math.Ceiling(count / (double)request.PageSize);
-                    response.TotalCount = count;
-                    response.IsSuccess = true;
-                    response.Message = "Consulta paginada exitosa..!!";
-                }
-            }
-            catch (Exception e)
-            {
-                response.Message = e.Message;
-                _logger.LogError(e.Message);
+                response.PageNumer = request.PageNumber;
+                response.TotalPages = (int)Math.Ceiling(count / (double)request.PageSize);
+                response.TotalCount = count;
+                response.IsSuccess = true;
+                response.Message = "Consulta paginada exitosa..!!";
             }
             return response;
         }

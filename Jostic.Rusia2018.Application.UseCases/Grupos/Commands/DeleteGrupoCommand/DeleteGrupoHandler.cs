@@ -20,19 +20,12 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Commands.DeleteGrupoComma
         public async Task<Response<bool>> Handle(DeleteGrupoCommand request, CancellationToken cancellationToken)
         {
             var response = new Response<bool>();
-            try
+            response.Data = await _unitOfWork.Grupo.DeleteAsync(request.idGrupo);
+            if (response.Data)
             {
-                response.Data = await _unitOfWork.Grupo.DeleteAsync(request.idGrupo);
-                if (response.Data)
-                {
-                    await _distributedCache.RemoveAsync("grupoList");
-                    response.IsSuccess = true;
-                    response.Message = "Eliminación exitosa..!!";
-                }
-            }
-            catch (Exception e)
-            {
-                response.Message = e.Message;
+                await _distributedCache.RemoveAsync("grupoList");
+                response.IsSuccess = true;
+                response.Message = "Eliminación exitosa..!!";
             }
             return response;
         }
