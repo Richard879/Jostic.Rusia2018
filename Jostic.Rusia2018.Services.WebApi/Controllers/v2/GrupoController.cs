@@ -7,11 +7,13 @@ using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllWithPaginationG
 using Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetGrupoQuery;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Jostic.Rusia2018.Services.WebApi.Controllers.v3
 {
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [EnableRateLimiting("fixedWindow")]
     [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiVersion("2.0")]
     public class GrupoController : ControllerBase
     {

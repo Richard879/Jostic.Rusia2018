@@ -9,6 +9,7 @@ using Jostic.Rusia2018.Services.WebApi.Modules.Validator;
 using Jostic.Rusia2018.Services.WebApi.Modules.Versioning;
 using Jostic.Rusia2018.Services.WebApi.Modules.Redis;
 using Jostic.Rusia2018.Services.WebApi.Modules.Middleware;
+using Jostic.Rusia2018.Services.WebApi.Modules.RateLimiter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +28,8 @@ builder.Services.AddVersioning();
 builder.Services.AddSwagger();
 builder.Services.AddValidator();
 //builder.Services.addWatchDog(builder.Configuration);
-//builder.Services.AddCaching();
 builder.Services.AddRedisCache(builder.Configuration);
+builder.Services.AddRateLimiting(builder.Configuration);
 
 var app = builder.Build();
 
@@ -54,10 +55,9 @@ app.UseHttpsRedirection();
 app.UseCors("policyApiEcommerce");
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseRateLimiter();
 app.MapControllers();
 app.AddMiddleware();
-//app.UseOutputCache();
-
 /*app.UseWatchDog(conf =>
 {
     conf.WatchPageUsername = builder.Configuration["WatchDog:WatchPageUsername"];
