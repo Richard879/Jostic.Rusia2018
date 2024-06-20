@@ -27,7 +27,6 @@ builder.Services.AddAuthentication(builder.Configuration);
 builder.Services.AddVersioning();
 builder.Services.AddSwagger();
 builder.Services.AddValidator();
-//builder.Services.addWatchDog(builder.Configuration);
 builder.Services.AddRedisCache(builder.Configuration);
 builder.Services.AddRateLimiting(builder.Configuration);
 
@@ -49,8 +48,6 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-
-//app.UseWatchDogExceptionLogger();
 app.UseHttpsRedirection();
 app.UseCors("policyApiEcommerce");
 app.UseAuthentication();
@@ -58,11 +55,6 @@ app.UseAuthorization();
 app.UseRateLimiter();
 app.MapControllers();
 app.AddMiddleware();
-/*app.UseWatchDog(conf =>
-{
-    conf.WatchPageUsername = builder.Configuration["WatchDog:WatchPageUsername"];
-    conf.WatchPagePassword = builder.Configuration["WatchDog:WatchPagePassword"];
-});*/
 
 app.Run();
 

@@ -1,6 +1,5 @@
 ﻿using Jostic.Rusia2018.Transversal.Common;
 using Microsoft.Extensions.Logging;
-using WatchDog;
 
 namespace Jostic.Rusia2018.Transversal.Logging
 {
@@ -16,19 +15,16 @@ namespace Jostic.Rusia2018.Transversal.Logging
         public void LogError(string message, params object[] args)
         {
             _logger.LogError(message, args);
-            WatchLogger.Log(message);
         }
 
         public void LogInformation(string message, params object[] args)
         {
             _logger.LogInformation(message, args);
-            WatchLogger.Log(message);
         }
 
         public void LogWarning(string message, params object[] args)
         {
             _logger.LogWarning(message, args);
-            WatchLogger.Log(message);
         }
     }
 }

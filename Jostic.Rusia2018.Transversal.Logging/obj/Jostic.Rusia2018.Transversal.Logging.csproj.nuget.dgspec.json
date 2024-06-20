@@ -114,10 +114,6 @@
             "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "WatchDog.NET": {
-              "target": "Package",
-              "version": "[1.4.10, )"
             }
           },
           "imports": [
