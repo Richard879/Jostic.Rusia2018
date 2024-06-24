@@ -163,9 +163,6 @@
               "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Interface\\Jostic.Rusia2018.Application.Interface.csproj": {
                 "projectPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Interface\\Jostic.Rusia2018.Application.Interface.csproj"
               },
-              "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\Jostic.Rusia2018.Application.Validator.csproj": {
-                "projectPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\Jostic.Rusia2018.Application.Validator.csproj"
-              },
               "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Domain.Entity\\Jostic.Rusia2018.Domain.Entity.csproj": {
                 "projectPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Domain.Entity\\Jostic.Rusia2018.Domain.Entity.csproj"
               },
@@ -188,6 +185,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.2, )"
             },
             "MediatR": {
               "target": "Package",
@@ -212,78 +217,6 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\Jostic.Rusia2018.Application.Validator.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\Jostic.Rusia2018.Application.Validator.csproj",
-        "projectName": "Jostic.Rusia2018.Application.Validator",
-        "projectPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\Jostic.Rusia2018.Application.Validator.csproj",
-        "packagesPath": "C:\\Users\\RICHARD\\.nuget\\packages\\",
-        "outputPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.Validator\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\RICHARD\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.DTO\\Jostic.Rusia2018.Application.DTO.csproj": {
-                "projectPath": "F:\\Richard\\Py_Visual\\Jostic.Rusia2018\\Jostic.Rusia2018.Application.DTO\\Jostic.Rusia2018.Application.DTO.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.9.0, )"
-            },
-            "FluentValidation.DependencyInjectionExtensions": {
-              "target": "Package",
-              "version": "[11.9.0, )"
             }
           },
           "imports": [
@@ -402,12 +335,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.9.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

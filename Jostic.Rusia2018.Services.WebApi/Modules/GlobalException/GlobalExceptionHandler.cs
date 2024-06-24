@@ -1,4 +1,4 @@
-﻿
+﻿using Jostic.Rusia2018.Application.UseCases.Common.Exceptions;
 using Jostic.Rusia2018.Transversal.Common;
 using System.Net;
 using System.Text.Json;
@@ -19,6 +19,12 @@ namespace Jostic.Rusia2018.Services.WebApi.Modules.GlobalException
             try
             {
                 await next(context);
+            }
+            catch (ValidationExceptionCustom ex)
+            {
+                context.Response.ContentType = "application/json";
+                await JsonSerializer.SerializeAsync(context.Response.Body,
+                    new Response<Object> { Message = "Errores de validación", Errors = ex.Errors! });
             }
             catch (Exception ex)
             {

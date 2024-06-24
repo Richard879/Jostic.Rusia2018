@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Jostic.Rusia2018.Application.UseCases.Users.Commands.CreateUserTokenCommand
 {
-    public class CreateUserTokenHandler : IRequestHandler<CreateUserTokenQuery, Response<UserDto>>
+    public class CreateUserTokenHandler : IRequestHandler<CreateUserTokenCommand, Response<UserDto>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -19,7 +19,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Users.Commands.CreateUserTokenCo
 
         //private readonly UserDtoValidator _validator;
 
-        public async Task<Response<UserDto>> Handle(CreateUserTokenQuery request, CancellationToken cancellationToken)
+        public async Task<Response<UserDto>> Handle(CreateUserTokenCommand request, CancellationToken cancellationToken)
         {
             var response = new Response<UserDto>();
             var user = await _unitOfWork.Users.Authenticate(request.UserName, request.Password);

@@ -5,7 +5,6 @@ using Jostic.Rusia2018.Services.WebApi.Modules.Authentication;
 using Jostic.Rusia2018.Services.WebApi.Modules.Feature;
 using Jostic.Rusia2018.Services.WebApi.Modules.Injection;
 using Jostic.Rusia2018.Services.WebApi.Modules.Swagger;
-using Jostic.Rusia2018.Services.WebApi.Modules.Validator;
 using Jostic.Rusia2018.Services.WebApi.Modules.Versioning;
 using Jostic.Rusia2018.Services.WebApi.Modules.Redis;
 using Jostic.Rusia2018.Services.WebApi.Modules.Middleware;
@@ -26,7 +25,6 @@ builder.Services.AddInjection(builder.Configuration);
 builder.Services.AddAuthentication(builder.Configuration);
 builder.Services.AddVersioning();
 builder.Services.AddSwagger();
-builder.Services.AddValidator();
 builder.Services.AddRedisCache(builder.Configuration);
 builder.Services.AddRateLimiting(builder.Configuration);
 

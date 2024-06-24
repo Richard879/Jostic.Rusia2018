@@ -34,7 +34,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         #region Metodos Asíncronos
         [AllowAnonymous]
         [HttpPost("Authenticate")]
-        public async Task<IActionResult> Authenticate([FromBody] CreateUserTokenQuery command)
+        public async Task<IActionResult> Authenticate([FromBody] CreateUserTokenCommand command)
         {
             var response = await _mediator.Send(command);
             if (response.IsSuccess)

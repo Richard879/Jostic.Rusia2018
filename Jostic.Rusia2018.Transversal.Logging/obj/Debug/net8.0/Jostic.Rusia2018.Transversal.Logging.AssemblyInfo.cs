@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jostic.Rusia2018.Transversal.Logging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e94f1d69ec2891f37e0a096fb74349075a747e55")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b85951274f6fb6ec46220977d5dafe14775e08b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jostic.Rusia2018.Transversal.Logging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jostic.Rusia2018.Transversal.Logging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

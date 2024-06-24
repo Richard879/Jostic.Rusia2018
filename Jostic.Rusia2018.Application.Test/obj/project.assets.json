@@ -149,7 +149,7 @@
           }
         }
       },
-      "FluentValidation/11.9.0": {
+      "FluentValidation/11.9.2": {
         "type": "package",
         "compile": {
           "lib/net8.0/FluentValidation.dll": {
@@ -162,10 +162,10 @@
           }
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+      "FluentValidation.DependencyInjectionExtensions/11.9.2": {
         "type": "package",
         "dependencies": {
-          "FluentValidation": "11.9.0",
+          "FluentValidation": "11.9.2",
           "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
         },
         "compile": {
@@ -2002,9 +2002,10 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "Jostic.Rusia2018.Application.DTO": "1.0.0",
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
-          "Jostic.Rusia2018.Application.Validator": "1.0.0",
           "Jostic.Rusia2018.Domain.Entity": "1.0.0",
           "Jostic.Rusia2018.Transversal.Common": "1.0.0",
           "MediatR": "12.3.0",
@@ -2019,21 +2020,6 @@
         },
         "runtime": {
           "bin/placeholder/Jostic.Rusia2018.Application.UseCases.dll": {}
-        }
-      },
-      "Jostic.Rusia2018.Application.Validator/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FluentValidation": "11.9.0",
-          "FluentValidation.DependencyInjectionExtensions": "11.9.0",
-          "Jostic.Rusia2018.Application.DTO": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Jostic.Rusia2018.Application.Validator.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Jostic.Rusia2018.Application.Validator.dll": {}
         }
       },
       "Jostic.Rusia2018.Domain.Entity/1.0.0": {
@@ -2075,7 +2061,6 @@
           "Asp.Versioning.Mvc.ApiExplorer": "8.0.0",
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
           "Jostic.Rusia2018.Application.UseCases": "1.0.0",
-          "Jostic.Rusia2018.Application.Validator": "1.0.0",
           "Jostic.Rusia2018.Persistence": "1.0.0",
           "Jostic.Rusia2018.Transversal.Logging": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
@@ -2097,9 +2082,6 @@
       "Jostic.Rusia2018.Transversal.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FluentValidation": "11.9.0"
-        },
         "compile": {
           "bin/placeholder/Jostic.Rusia2018.Transversal.Common.dll": {}
         },
@@ -2319,16 +2301,16 @@
         "readme.md"
       ]
     },
-    "FluentValidation/11.9.0": {
-      "sha512": "VneVlTvwYDkfHV5av3QrQ0amALgrLX6LV94wlYyEsh0B/klJBW7C8y2eAtj5tOZ3jH6CAVpr4s1ZGgew/QWyig==",
+    "FluentValidation/11.9.2": {
+      "sha512": "XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
       "type": "package",
-      "path": "fluentvalidation/11.9.0",
+      "path": "fluentvalidation/11.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.9.0.nupkg.sha512",
+        "fluentvalidation.11.9.2.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -2344,16 +2326,16 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
-    "FluentValidation.DependencyInjectionExtensions/11.9.0": {
-      "sha512": "Ko++xvN7HUf4WlHJL6bhsybUj/uho8ApOYIdxGjpF8Ot7Fukz6LRfRJ06H0KXhWqmMHWEbu89hJbjKJHtg7b9g==",
+    "FluentValidation.DependencyInjectionExtensions/11.9.2": {
+      "sha512": "PMAdnR1fX1c8DyUvu5YvRa0V0JHES8vzXnVX0OSS3z9W/SkuHqcGrtiSOdW1QehG3vZhXsKhqf3wgDzW/OYahA==",
       "type": "package",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.9.0",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
@@ -5328,11 +5310,6 @@
       "type": "project",
       "path": "../Jostic.Rusia2018.Application.UseCases/Jostic.Rusia2018.Application.UseCases.csproj",
       "msbuildProject": "../Jostic.Rusia2018.Application.UseCases/Jostic.Rusia2018.Application.UseCases.csproj"
-    },
-    "Jostic.Rusia2018.Application.Validator/1.0.0": {
-      "type": "project",
-      "path": "../Jostic.Rusia2018.Application.Validator/Jostic.Rusia2018.Application.Validator.csproj",
-      "msbuildProject": "../Jostic.Rusia2018.Application.Validator/Jostic.Rusia2018.Application.Validator.csproj"
     },
     "Jostic.Rusia2018.Domain.Entity/1.0.0": {
       "type": "project",

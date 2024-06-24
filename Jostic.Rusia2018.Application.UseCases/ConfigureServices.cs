@@ -1,4 +1,5 @@
-﻿using Jostic.Rusia2018.Application.Interface.UseCases;
+﻿using FluentValidation;
+using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Application.UseCases.Common.Behaviours;
 using Jostic.Rusia2018.Application.UseCases.Grupos;
 using Jostic.Rusia2018.Application.UseCases.Paises;
@@ -14,10 +15,13 @@ namespace Jostic.Rusia2018.Application.UseCases
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
             services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
                 cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+                cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
             });
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IUsersApplication, UsersApplication>();

@@ -473,26 +473,26 @@
           "lib/net7.0/Dapper.dll": {}
         }
       },
-      "FluentValidation/11.9.0": {
+      "FluentValidation/11.9.2": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.9.0.0"
+            "fileVersion": "11.9.2.0"
           }
         },
         "compile": {
           "lib/net8.0/FluentValidation.dll": {}
         }
       },
-      "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+      "FluentValidation.DependencyInjectionExtensions/11.9.2": {
         "dependencies": {
-          "FluentValidation": "11.9.0",
+          "FluentValidation": "11.9.2",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "runtime": {
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.9.0.0"
+            "fileVersion": "11.9.2.0"
           }
         },
         "compile": {
@@ -1667,9 +1667,10 @@
       "Jostic.Rusia2018.Application.UseCases/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.9.2",
           "Jostic.Rusia2018.Application.DTO": "1.0.0",
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
-          "Jostic.Rusia2018.Application.Validator": "1.0.0",
           "Jostic.Rusia2018.Domain.Entity": "1.0.0",
           "Jostic.Rusia2018.Transversal.Common": "1.0.0",
           "MediatR": "12.3.0",
@@ -1684,19 +1685,6 @@
         },
         "compile": {
           "Jostic.Rusia2018.Application.UseCases.dll": {}
-        }
-      },
-      "Jostic.Rusia2018.Application.Validator/1.0.0": {
-        "dependencies": {
-          "FluentValidation": "11.9.0",
-          "FluentValidation.DependencyInjectionExtensions": "11.9.0",
-          "Jostic.Rusia2018.Application.DTO": "1.0.0"
-        },
-        "runtime": {
-          "Jostic.Rusia2018.Application.Validator.dll": {}
-        },
-        "compile": {
-          "Jostic.Rusia2018.Application.Validator.dll": {}
         }
       },
       "Jostic.Rusia2018.Domain.Entity/1.0.0": {
@@ -1732,7 +1720,6 @@
           "Asp.Versioning.Mvc.ApiExplorer": "8.0.0",
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
           "Jostic.Rusia2018.Application.UseCases": "1.0.0",
-          "Jostic.Rusia2018.Application.Validator": "1.0.0",
           "Jostic.Rusia2018.Persistence": "1.0.0",
           "Jostic.Rusia2018.Transversal.Logging": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
@@ -1749,9 +1736,6 @@
         }
       },
       "Jostic.Rusia2018.Transversal.Common/1.0.0": {
-        "dependencies": {
-          "FluentValidation": "11.9.0"
-        },
         "runtime": {
           "Jostic.Rusia2018.Transversal.Common.dll": {}
         },
@@ -1782,187 +1766,11 @@
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {}
         }
       },
-      "WatchDog/1.4.10.0": {
+      "Jostic.Rusia2018.Application.Validator/1.0.0.0": {
         "runtime": {
-          "WatchDog.dll": {
-            "assemblyVersion": "1.4.10.0",
-            "fileVersion": "1.4.10.0"
-          }
-        }
-      },
-      "Microsoft.IO.RecyclableMemoryStream/2.2.0.0": {
-        "runtime": {
-          "Microsoft.IO.RecyclableMemoryStream.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.0"
-          }
-        }
-      },
-      "MongoDB.Bson/2.18.0.0": {
-        "runtime": {
-          "MongoDB.Bson.dll": {
-            "assemblyVersion": "2.18.0.0",
-            "fileVersion": "2.18.0.0"
-          }
-        }
-      },
-      "LiteDB/5.0.11.0": {
-        "runtime": {
-          "LiteDB.dll": {
-            "assemblyVersion": "5.0.11.0",
-            "fileVersion": "5.0.11.0"
-          }
-        }
-      },
-      "MongoDB.Driver/2.18.0.0": {
-        "runtime": {
-          "MongoDB.Driver.dll": {
-            "assemblyVersion": "2.18.0.0",
-            "fileVersion": "2.18.0.0"
-          }
-        }
-      },
-      "System.Data.SqlClient/4.6.1.5": {
-        "runtime": {
-          "System.Data.SqlClient.dll": {
-            "assemblyVersion": "4.6.1.5",
-            "fileVersion": "4.700.22.51706"
-          }
-        }
-      },
-      "MongoDB.Driver.Core/2.18.0.0": {
-        "runtime": {
-          "MongoDB.Driver.Core.dll": {
-            "assemblyVersion": "2.18.0.0",
-            "fileVersion": "2.18.0.0"
-          }
-        }
-      },
-      "Npgsql/6.0.4.0": {
-        "runtime": {
-          "Npgsql.dll": {
-            "assemblyVersion": "6.0.4.0",
-            "fileVersion": "6.0.4.0"
-          }
-        }
-      },
-      "MySql.Data/8.0.29.0": {
-        "runtime": {
-          "MySql.Data.dll": {
-            "assemblyVersion": "8.0.29.0",
-            "fileVersion": "8.0.29.0"
-          }
-        }
-      },
-      "MongoDB.Libmongocrypt/1.6.0.0": {
-        "runtime": {
-          "MongoDB.Libmongocrypt.dll": {
-            "assemblyVersion": "1.6.0.0",
-            "fileVersion": "1.6.0.0"
-          }
-        }
-      },
-      "DnsClient/1.6.1.0": {
-        "runtime": {
-          "DnsClient.dll": {
-            "assemblyVersion": "1.6.1.0",
-            "fileVersion": "1.6.1.0"
-          }
-        }
-      },
-      "SharpCompress/0.30.1.0": {
-        "runtime": {
-          "SharpCompress.dll": {
-            "assemblyVersion": "0.30.1.0",
-            "fileVersion": "0.30.1.0"
-          }
-        }
-      },
-      "ZstdSharp/0.6.2.0": {
-        "runtime": {
-          "ZstdSharp.dll": {
-            "assemblyVersion": "0.6.2.0",
-            "fileVersion": "0.6.2.0"
-          }
-        }
-      },
-      "Snappier/1.0.0.0": {
-        "runtime": {
-          "Snappier.dll": {
+          "Jostic.Rusia2018.Application.Validator.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Google.Protobuf/3.19.4.0": {
-        "runtime": {
-          "Google.Protobuf.dll": {
-            "assemblyVersion": "3.19.4.0",
-            "fileVersion": "3.19.4.0"
-          }
-        }
-      },
-      "ZstdNet/1.4.5.0": {
-        "runtime": {
-          "ZstdNet.dll": {
-            "assemblyVersion": "1.4.5.0",
-            "fileVersion": "1.4.5.0"
-          }
-        }
-      },
-      "K4os.Compression.LZ4.Streams/1.2.6.0": {
-        "runtime": {
-          "K4os.Compression.LZ4.Streams.dll": {
-            "assemblyVersion": "1.2.6.0",
-            "fileVersion": "1.2.6.0"
-          }
-        }
-      },
-      "BouncyCastle.Crypto/1.8.5.0": {
-        "runtime": {
-          "BouncyCastle.Crypto.dll": {
-            "assemblyVersion": "1.8.5.0",
-            "fileVersion": "1.8.19031.1"
-          }
-        }
-      },
-      "Ubiety.Dns.Core/2.2.1.0": {
-        "runtime": {
-          "Ubiety.Dns.Core.dll": {
-            "assemblyVersion": "2.2.1.0",
-            "fileVersion": "2.2.1.0"
-          }
-        }
-      },
-      "System.Security.Permissions/4.0.3.0": {
-        "runtime": {
-          "System.Security.Permissions.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.700.19.56404"
-          }
-        }
-      },
-      "K4os.Compression.LZ4/1.2.6.0": {
-        "runtime": {
-          "K4os.Compression.LZ4.dll": {
-            "assemblyVersion": "1.2.6.0",
-            "fileVersion": "1.2.6.0"
-          }
-        }
-      },
-      "K4os.Hash.xxHash/1.0.6.0": {
-        "runtime": {
-          "K4os.Hash.xxHash.dll": {
-            "assemblyVersion": "1.0.6.0",
-            "fileVersion": "1.0.6.0"
-          }
-        }
-      },
-      "System.Windows.Extensions/4.0.1.0": {
-        "runtime": {
-          "System.Windows.Extensions.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.700.19.56404"
           }
         }
       },
@@ -3825,19 +3633,19 @@
       "path": "dapper/2.1.35",
       "hashPath": "dapper.2.1.35.nupkg.sha512"
     },
-    "FluentValidation/11.9.0": {
+    "FluentValidation/11.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VneVlTvwYDkfHV5av3QrQ0amALgrLX6LV94wlYyEsh0B/klJBW7C8y2eAtj5tOZ3jH6CAVpr4s1ZGgew/QWyig==",
-      "path": "fluentvalidation/11.9.0",
-      "hashPath": "fluentvalidation.11.9.0.nupkg.sha512"
+      "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
+      "path": "fluentvalidation/11.9.2",
+      "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
     },
-    "FluentValidation.DependencyInjectionExtensions/11.9.0": {
+    "FluentValidation.DependencyInjectionExtensions/11.9.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ko++xvN7HUf4WlHJL6bhsybUj/uho8ApOYIdxGjpF8Ot7Fukz6LRfRJ06H0KXhWqmMHWEbu89hJbjKJHtg7b9g==",
-      "path": "fluentvalidation.dependencyinjectionextensions/11.9.0",
-      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512"
+      "sha512": "sha512-PMAdnR1fX1c8DyUvu5YvRa0V0JHES8vzXnVX0OSS3z9W/SkuHqcGrtiSOdW1QehG3vZhXsKhqf3wgDzW/OYahA==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.9.2",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512"
     },
     "MediatR/12.3.0": {
       "type": "package",
@@ -4435,11 +4243,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Jostic.Rusia2018.Application.Validator/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Jostic.Rusia2018.Domain.Entity/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4470,117 +4273,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "WatchDog/1.4.10.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.IO.RecyclableMemoryStream/2.2.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MongoDB.Bson/2.18.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "LiteDB/5.0.11.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MongoDB.Driver/2.18.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Data.SqlClient/4.6.1.5": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MongoDB.Driver.Core/2.18.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Npgsql/6.0.4.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MySql.Data/8.0.29.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "MongoDB.Libmongocrypt/1.6.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DnsClient/1.6.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SharpCompress/0.30.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ZstdSharp/0.6.2.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Snappier/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Google.Protobuf/3.19.4.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ZstdNet/1.4.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "K4os.Compression.LZ4.Streams/1.2.6.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BouncyCastle.Crypto/1.8.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Ubiety.Dns.Core/2.2.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Security.Permissions/4.0.3.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "K4os.Compression.LZ4/1.2.6.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "K4os.Hash.xxHash/1.0.6.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Windows.Extensions/4.0.1.0": {
+    "Jostic.Rusia2018.Application.Validator/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
