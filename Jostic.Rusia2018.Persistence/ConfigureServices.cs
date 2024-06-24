@@ -11,9 +11,10 @@ namespace Jostic.Rusia2018.Persistence
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<DapperContext>();
-            services.AddScoped<IGrupoRepository, GrupoRepository>();
+            services.AddScoped<IGrupoRepository, GroupRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
-            services.AddScoped<IPaisRepository, PaisRepository>();
+            services.AddScoped<IPaisRepository, CountryRepository>();
+            services.AddScoped<IContinenteRepository, ContinenteRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;

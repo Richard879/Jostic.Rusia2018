@@ -6,15 +6,18 @@ namespace Jostic.Rusia2018.Persistence.Repositories
     {
         public IUsersRepository Users { get; }
 
-        public IGrupoRepository Grupo { get; }
+        public IGrupoRepository Groups { get; }
 
-        public IPaisRepository Pais { get; }
+        public IPaisRepository Countrys { get; }
 
-        public UnitOfWork(IUsersRepository users, IGrupoRepository grupo, IPaisRepository pais)
+        public IContinenteRepository Continents { get; }
+
+        public UnitOfWork(IUsersRepository user, IGrupoRepository group, IPaisRepository pais, IContinenteRepository continents)
         {
-            Users = users;
-            Grupo = grupo;
-            Pais = pais;
+            Users = user;
+            Groups = group;
+            Countrys = pais;
+            Continents = continents;
         }
 
         public void Dispose()

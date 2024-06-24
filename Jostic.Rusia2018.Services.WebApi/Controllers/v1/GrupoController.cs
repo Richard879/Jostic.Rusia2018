@@ -20,7 +20,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 
         #region Metodos Síncronos
         [HttpPost("Insert")]
-        public IActionResult Insert([FromBody] GrupoDto grupoDTO)
+        public IActionResult Insert([FromBody] GroupDto grupoDTO)
         {
             if (grupoDTO == null)
                 return BadRequest();
@@ -32,7 +32,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpPut("Update/{idGrupo}")]
-        public IActionResult Update(int idGrupo, [FromBody] GrupoDto grupoDTO)
+        public IActionResult Update(int idGrupo, [FromBody] GroupDto grupoDTO)
         {
             var groupDTO = _grupoAplication.Get(idGrupo);
             if (groupDTO.Data == null)
@@ -94,7 +94,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
 
         #region Metodos Asíncronos
         [HttpPost("InsertAsync")]
-        public async Task<IActionResult> InsertAsync([FromBody] GrupoDto grupoDTO)
+        public async Task<IActionResult> InsertAsync([FromBody] GroupDto grupoDTO)
         {
             if (grupoDTO == null)
                 return BadRequest();
@@ -106,7 +106,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         [HttpPut("UpdateAsync/{idGrupo}")]
-        public async Task<IActionResult> UpdateAsync(int idGrupo, [FromBody] GrupoDto grupoDTO)
+        public async Task<IActionResult> UpdateAsync(int idGrupo, [FromBody] GroupDto grupoDTO)
         {
             var customerDto = await _grupoAplication.GetAsync(idGrupo);
             if (customerDto.Data == null)

@@ -3,7 +3,8 @@
     public interface IUnitOfWork
     {
         IUsersRepository Users { get; }
-        IGrupoRepository Grupo { get; }
-        IPaisRepository Pais { get; }
+        IGrupoRepository Groups { get; }
+        IPaisRepository Countrys { get; }
+        IContinenteRepository Continents { get; }
     }
 }

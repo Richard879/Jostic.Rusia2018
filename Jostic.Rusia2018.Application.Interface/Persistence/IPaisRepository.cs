@@ -2,10 +2,10 @@
 
 namespace Jostic.Rusia2018.Application.Interface.Persistence
 {
-    public interface IPaisRepository: IGenericRepository<Pais> 
+    public interface IPaisRepository: IGenericRepository<Country> 
     {
-        IEnumerable<Pais> GetPaisesAll();
-        Task<IEnumerable<Pais>> GetPaisesAllAsync();
-        Task<IEnumerable<Pais>> GetPaisesAllFiltro(Pais entity);
+        IEnumerable<Country> GetPaisesAll();
+        Task<IEnumerable<Country>> GetPaisesAllAsync();
+        Task<IEnumerable<Country>> GetPaisesAllFiltro(Country entity);
     }
 }

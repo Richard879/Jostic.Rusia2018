@@ -6,23 +6,23 @@ namespace Jostic.Rusia2018.Application.Interface.UseCases
     public interface IPaisApplication
     {
         #region Metodos Sincronos
-        Response<bool> Insert(PaisDto paisDto);
-        Response<bool> Update(PaisDto paisDto);
+        Response<bool> Insert(CountryDto paisDto);
+        Response<bool> Update(CountryDto paisDto);
         Response<bool> Delete(int idPais);
-        Response<PaisDto> Get(int idPais);
-        Response<IEnumerable<PaisDto>> GetAll();
-        Response<IEnumerable<PaisDto>> GetPaisesAll();
-        ResponsePagination<IEnumerable<PaisDto>> GetAllWithPagination(int pageNumber, int pageSize);
+        Response<CountryDto> Get(int idPais);
+        Response<IEnumerable<CountryDto>> GetAll();
+        Response<IEnumerable<CountryDto>> GetPaisesAll();
+        ResponsePagination<IEnumerable<CountryDto>> GetAllWithPagination(int pageNumber, int pageSize);
         #endregion
 
         #region Metodos Asíncronos
-        Task<Response<bool>> InsertAsync(PaisDto paisDto);
-        Task<Response<bool>> UpdateAsync(PaisDto paisDto);
+        Task<Response<bool>> InsertAsync(CountryDto paisDto);
+        Task<Response<bool>> UpdateAsync(CountryDto paisDto);
         Task<Response<bool>> DeleteAsync(int idPais);
-        Task<Response<PaisDto>> GetAsync(int idPais);
-        Task<Response<IEnumerable<PaisDto>>> GetAllAsync();
-        Task<Response<IEnumerable<PaisDto>>> GetPaisesAllAsync();
-        Task<ResponsePagination<IEnumerable<PaisDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
+        Task<Response<CountryDto>> GetAsync(int idPais);
+        Task<Response<IEnumerable<CountryDto>>> GetAllAsync();
+        Task<Response<IEnumerable<CountryDto>>> GetPaisesAllAsync();
+        Task<ResponsePagination<IEnumerable<CountryDto>>> GetAllWithPaginationAsync(int pageNumber, int pageSize);
         #endregion
     }
 }

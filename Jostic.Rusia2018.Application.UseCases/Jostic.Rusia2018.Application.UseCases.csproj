@@ -26,7 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Paises\Commands\" />
+    <Folder Include="Continents\Commands\" />
+    <Folder Include="Countrys\Commands\" />
   </ItemGroup>
 
 </Project>
