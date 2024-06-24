@@ -2,7 +2,7 @@
 
 namespace Jostic.Rusia2018.Application.Interface.Persistence
 {
-    public interface IContinenteRepository : IGenericRespositoryAsync<Continent>
+    public interface IContinentRepository : IGenericRespositoryAsync<Continent>
     {
     }
 }

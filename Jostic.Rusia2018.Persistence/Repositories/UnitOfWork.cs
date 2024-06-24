@@ -10,9 +10,9 @@ namespace Jostic.Rusia2018.Persistence.Repositories
 
         public IPaisRepository Countrys { get; }
 
-        public IContinenteRepository Continents { get; }
+        public IContinentRepository Continents { get; }
 
-        public UnitOfWork(IUsersRepository user, IGrupoRepository group, IPaisRepository pais, IContinenteRepository continents)
+        public UnitOfWork(IUsersRepository user, IGrupoRepository group, IPaisRepository pais, IContinentRepository continents)
         {
             Users = user;
             Groups = group;

@@ -5,6 +5,6 @@
         IUsersRepository Users { get; }
         IGrupoRepository Groups { get; }
         IPaisRepository Countrys { get; }
-        IContinenteRepository Continents { get; }
+        IContinentRepository Continents { get; }
     }
 }

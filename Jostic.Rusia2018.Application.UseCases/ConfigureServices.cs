@@ -2,7 +2,6 @@
 using Jostic.Rusia2018.Application.Interface.UseCases;
 using Jostic.Rusia2018.Application.UseCases.Common.Behaviours;
 using Jostic.Rusia2018.Application.UseCases.Grupos;
-using Jostic.Rusia2018.Application.UseCases.Paises;
 using Jostic.Rusia2018.Application.UseCases.Users;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +27,6 @@ namespace Jostic.Rusia2018.Application.UseCases
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IUsersApplication, UsersApplication>();
             services.AddScoped<IGrupoApplication, GrupoApplication>();
-            services.AddScoped<IPaisApplication, PaisApplication>();
 
             return services;
         }

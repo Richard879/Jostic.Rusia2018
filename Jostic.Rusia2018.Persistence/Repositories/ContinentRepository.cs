@@ -6,11 +6,11 @@ using System.Data;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
-    public class ContinenteRepository : IContinenteRepository
+    public class ContinentRepository : IContinentRepository
     {
         private readonly DapperContext _context;
 
-        public ContinenteRepository(DapperContext context)
+        public ContinentRepository(DapperContext context)
         {
             _context = context;
         }
