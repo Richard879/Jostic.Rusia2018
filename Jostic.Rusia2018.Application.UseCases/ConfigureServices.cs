@@ -23,6 +23,7 @@ namespace Jostic.Rusia2018.Application.UseCases
                 cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
                 cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
                 cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+                cfg.AddOpenBehavior(typeof(CachingBehavior<,>));
             });
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddScoped<IUsersApplication, UsersApplication>();

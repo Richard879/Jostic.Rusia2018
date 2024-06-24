@@ -27,32 +27,9 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllGrupoQuery
         public async Task<Response<IEnumerable<GrupoDto>>> Handle(GetAllGrupoQuery request, CancellationToken cancellationToken)
         {
             var response = new Response<IEnumerable<GrupoDto>>();
-            var cacheKey = "grupoList";
-            TimeSpan? slidingExpiration = null;
 
-            var redisGrupo = await _distributedCache.GetAsync(cacheKey);
-            if (redisGrupo != null)
-            {
-                response.Data = JsonSerializer.Deserialize<IEnumerable<GrupoDto>>(redisGrupo);
-            }
-            else
-            {
-                var grupos = await _unitOfWork.Grupo.GetAllAsync();
-                response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
-                if (response.Data != null)
-                {
-                    var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
-                    var cacheEntryOptions = new DistributedCacheEntryOptions
-                    {
-                        SlidingExpiration = slidingExpiration ?? TimeSpan.FromMinutes(30)
-                    };
-                    /*var options = new DistributedCacheEntryExtensions()
-                        .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))
-                    .SetSlidingExpiration(DateTime.Now.AddSeconds(5));*/
-
-                    await _distributedCache.SetAsync(cacheKey, serializerGrupo, cacheEntryOptions);
-                }
-            }
+            var grupos = await _unitOfWork.Grupo.GetAllAsync();
+            response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
 
             if (response.Data != null)
             {
@@ -61,6 +38,33 @@ namespace Jostic.Rusia2018.Application.UseCases.Grupos.Queries.GetAllGrupoQuery
                 _logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
+
+            /*var cacheKey = "grupoList";
+            //TimeSpan? slidingExpiration = null;
+
+            var redisGrupo = await _distributedCache.GetAsync(cacheKey);
+            if (redisGrupo != null)
+            {
+                response.Data = JsonSerializer.Deserialize<IEnumerable<GrupoDto>>(redisGrupo);
+            }
+            else
+            {
+            var grupos = await _unitOfWork.Grupo.GetAllAsync();
+                response.Data = _mapper.Map<IEnumerable<GrupoDto>>(grupos);
+                if (response.Data != null)
+                {
+                    var serializerGrupo = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response.Data));
+                    var cacheEntryOptions = new DistributedCacheEntryOptions
+                    {
+                        SlidingExpiration = slidingExpiration ?? TimeSpan.FromMinutes(30)
+                    };
+                    var options = new DistributedCacheEntryExtensions()
+                        .SetAbsoluteExpiration(DateTime.Now.AddSeconds(10))
+                    .SetSlidingExpiration(DateTime.Now.AddSeconds(5));
+
+                    await _distributedCache.SetAsync(cacheKey, serializerGrupo, cacheEntryOptions);
+                }
+            }*/
         }
     }
 }
