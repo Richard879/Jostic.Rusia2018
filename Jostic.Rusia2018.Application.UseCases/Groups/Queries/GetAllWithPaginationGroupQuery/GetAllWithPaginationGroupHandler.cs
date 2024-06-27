@@ -21,8 +21,8 @@ namespace Jostic.Rusia2018.Application.UseCases.Groups.Queries.GetAllWithPaginat
         {
             var response = new ResponsePagination<IEnumerable<GroupDto>>();
             var count = await _unitOfWork.Groups.CountAsync();
-            var customers = await _unitOfWork.Groups.GetAllWithPaginationAsync(request.PageNumber, request.PageSize);
-            response.Data = _mapper.Map<IEnumerable<GroupDto>>(customers);
+            var entity = await _unitOfWork.Groups.GetAllWithPaginationAsync(request.PageNumber, request.PageSize);
+            response.Data = _mapper.Map<IEnumerable<GroupDto>>(entity);
             if (response.Data != null)
             {
                 response.PageNumer = request.PageNumber;

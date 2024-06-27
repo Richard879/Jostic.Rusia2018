@@ -23,8 +23,8 @@ namespace Jostic.Rusia2018.Application.UseCases.Groups.Commands.CreateGrupoComma
         public async Task<Response<bool>> Handle(CreateGroupCommand request, CancellationToken cancellationToken)
         {
             var response = new Response<bool>();
-            var grupo = _mapper.Map<Group>(request);
-            response.Data = await _unitOfWork.Groups.InsertAsync(grupo);
+            var entity = _mapper.Map<Group>(request);
+            response.Data = await _unitOfWork.Groups.InsertAsync(entity);
             if (response.Data)
             {
                 await _distributedCache.RemoveAsync("grupoList");
