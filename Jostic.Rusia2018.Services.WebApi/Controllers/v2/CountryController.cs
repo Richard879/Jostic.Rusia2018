@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning;
+using Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetAllQuery;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllQuery;
@@ -20,6 +21,17 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         }
 
         #region Metodos Asíncronos
+        [HttpPost("Insert")]
+        public async Task<IActionResult> Insert([FromBody] CreateCountryCommand command)
+        {
+            if (command == null)
+                return BadRequest();
+            var response = await _mediator.Send(command);
+            if (response.IsSuccess)
+                return Ok(response);
+
+            return BadRequest(response.Message);
+        }
 
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()

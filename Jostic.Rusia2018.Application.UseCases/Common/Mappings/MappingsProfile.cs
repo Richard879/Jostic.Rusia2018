@@ -4,6 +4,7 @@ using Jostic.Rusia2018.Application.DTO;
 using Jostic.Rusia2018.Application.UseCases.Groups.Commands.CreateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Groups.Commands.UpdateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter;
+using Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand;
 
 namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
 {
@@ -23,6 +24,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
             CreateMap<Group, CreateGroupCommand>().ReverseMap();
             CreateMap<Group, UpdateGroupCommand>().ReverseMap();
             CreateMap<Country, GetCountryAllFilterQuery>().ReverseMap();
+            CreateMap<Country, CreateCountryCommand>().ReverseMap();
 
         }
     }

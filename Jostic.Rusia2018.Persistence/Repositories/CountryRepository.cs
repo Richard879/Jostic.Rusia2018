@@ -81,9 +81,20 @@ namespace Jostic.Rusia2018.Persistence.Repositories
 
         #region Métodos Asíncronos
 
-        public Task<bool> InsertAsync(Country entity)
+        public async Task<bool> InsertAsync(Country entity)
         {
-            throw new NotImplementedException();
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "PaisInsert";
+                var parameters = new DynamicParameters();
+                parameters.Add("nomPais", entity.nomPais);
+                parameters.Add("idTecnico", entity.tecnico.idTecnico);
+                parameters.Add("idGrupo", entity.grupo.idGrupo);
+                parameters.Add("idContinente", entity.continente.idContinente);
+
+                var result = await connection.ExecuteAsync(query, param: parameters, commandType: CommandType.StoredProcedure);
+                return result > 0;
+            }
         }
 
         public Task<bool> UpdateAsync(Country entity)
@@ -144,12 +155,12 @@ namespace Jostic.Rusia2018.Persistence.Repositories
                 },
                 splitOn: "descripcion, idGrupo, idContinente, idTecnico");
 
-                var filter = paises.Where(p => p.idPais == entity.idPais || 
-                                            p.nomPais == entity.nomPais || 
-                                            p.grupo.idGrupo == entity.grupo.idGrupo ||
-                                            p.grupo.descripcion == entity.grupo.descripcion  ||
-                                            p.tecnico.idTecnico == entity.tecnico.idTecnico ||
-                                            p.tecnico.nomTecnico == entity.tecnico.nomTecnico).ToList();
+                var filter = paises.Where(p => p.idPais == entity.idPais && 
+                                            (entity.nomPais == String.Empty || p.nomPais == entity.nomPais) && 
+                                            (entity.grupo.idGrupo == 0 || p.grupo.idGrupo == entity.grupo.idGrupo) &&
+                                            (entity.grupo.descripcion == String.Empty || p.grupo.descripcion == entity.grupo.descripcion) &&
+                                            (entity.tecnico.idTecnico == 0 || p.tecnico.idTecnico == entity.tecnico.idTecnico) &&
+                                            (entity.tecnico.nomTecnico == String.Empty || p.tecnico.nomTecnico == entity.tecnico.nomTecnico)).ToList();
 
                 return filter;
             }

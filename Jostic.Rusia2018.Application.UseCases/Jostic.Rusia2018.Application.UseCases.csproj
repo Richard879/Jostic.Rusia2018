@@ -25,9 +25,4 @@
     <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Common\Jostic.Rusia2018.Transversal.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Continents\Commands\" />
-    <Folder Include="Countrys\Commands\" />
-  </ItemGroup>
-
 </Project>

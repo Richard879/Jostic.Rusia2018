@@ -2,11 +2,10 @@
 using Jostic.Rusia2018.Transversal.Common;
 using MediatR;
 
-namespace Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter
+namespace Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand
 {
-    public sealed record GetCountryAllFilterQuery : IRequest<Response<IEnumerable<CountryDto>>>
+    public sealed record CreateCountryCommand : IRequest<Response<bool>>
     {
-        public int idPais { get; set; }
         public string nomPais { get; set; } = string.Empty;
 
         public required GroupDto grupo { get; set; } = null!;
