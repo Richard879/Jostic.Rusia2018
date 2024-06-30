@@ -3,8 +3,9 @@
     public interface IUnitOfWork
     {
         IUsersRepository Users { get; }
-        IGrupoRepository Groups { get; }
-        IPaisRepository Countrys { get; }
+        IGroupRepository Groups { get; }
+        ICountryRepository Countrys { get; }
         IContinentRepository Continents { get; }
+        ITechnicalRepository Technicals { get; }
     }
 }

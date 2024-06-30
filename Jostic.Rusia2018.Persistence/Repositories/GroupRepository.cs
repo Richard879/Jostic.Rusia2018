@@ -6,7 +6,7 @@ using System.Data;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
-    internal class GroupRepository : IGrupoRepository
+    public class GroupRepository : IGroupRepository
     {
         private readonly DapperContext _context;
 

@@ -1721,7 +1721,6 @@
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
           "Jostic.Rusia2018.Application.UseCases": "1.0.0",
           "Jostic.Rusia2018.Persistence": "1.0.0",
-          "Jostic.Rusia2018.Transversal.Logging": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -1743,18 +1742,6 @@
           "Jostic.Rusia2018.Transversal.Common.dll": {}
         }
       },
-      "Jostic.Rusia2018.Transversal.Logging/1.0.0": {
-        "dependencies": {
-          "Jostic.Rusia2018.Transversal.Common": "1.0.0",
-          "Microsoft.Extensions.Logging": "8.0.0"
-        },
-        "runtime": {
-          "Jostic.Rusia2018.Transversal.Logging.dll": {}
-        },
-        "compile": {
-          "Jostic.Rusia2018.Transversal.Logging.dll": {}
-        }
-      },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
         "runtime": {
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
@@ -1766,9 +1753,9 @@
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {}
         }
       },
-      "Jostic.Rusia2018.Application.Validator/1.0.0.0": {
+      "Jostic.Rusia2018.Transversal.Logging/1.0.0.0": {
         "runtime": {
-          "Jostic.Rusia2018.Application.Validator.dll": {
+          "Jostic.Rusia2018.Transversal.Logging.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -4263,17 +4250,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Jostic.Rusia2018.Transversal.Logging/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Jostic.Rusia2018.Application.Validator/1.0.0.0": {
+    "Jostic.Rusia2018.Transversal.Logging/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

@@ -22,7 +22,6 @@
     <ProjectReference Include="..\Jostic.Rusia2018.Application.Interface\Jostic.Rusia2018.Application.Interface.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Application.UseCases\Jostic.Rusia2018.Application.UseCases.csproj" />
     <ProjectReference Include="..\Jostic.Rusia2018.Persistence\Jostic.Rusia2018.Persistence.csproj" />
-    <ProjectReference Include="..\Jostic.Rusia2018.Transversal.Logging\Jostic.Rusia2018.Transversal.Logging.csproj" />
   </ItemGroup>
 
 </Project>

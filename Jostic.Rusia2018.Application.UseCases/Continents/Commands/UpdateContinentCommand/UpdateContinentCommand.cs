@@ -5,7 +5,7 @@ namespace Jostic.Rusia2018.Application.UseCases.Continents.Commands.UpdateContin
 {
     public sealed record UpdateContinentCommand : IRequest<Response<bool>>
     {
-        public int idContinent { get; set; }
+        public int idContinente { get; set; }
         public string descripcion { get; set; } = string.Empty;
     }
 }

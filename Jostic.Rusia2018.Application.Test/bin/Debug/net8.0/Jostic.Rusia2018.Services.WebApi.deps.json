@@ -14,7 +14,6 @@
           "Jostic.Rusia2018.Application.Interface": "1.0.0",
           "Jostic.Rusia2018.Application.UseCases": "1.0.0",
           "Jostic.Rusia2018.Persistence": "1.0.0",
-          "Jostic.Rusia2018.Transversal.Logging": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -699,15 +698,6 @@
         "runtime": {
           "Jostic.Rusia2018.Transversal.Common.dll": {}
         }
-      },
-      "Jostic.Rusia2018.Transversal.Logging/1.0.0": {
-        "dependencies": {
-          "Jostic.Rusia2018.Transversal.Common": "1.0.0",
-          "Microsoft.Extensions.Logging": "8.0.0"
-        },
-        "runtime": {
-          "Jostic.Rusia2018.Transversal.Logging.dll": {}
-        }
       }
     }
   },
@@ -1184,11 +1174,6 @@
       "sha512": ""
     },
     "Jostic.Rusia2018.Transversal.Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Jostic.Rusia2018.Transversal.Logging/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
-    public class CountryRepository : IPaisRepository
+    public class CountryRepository : ICountryRepository
     {
         private readonly DapperContext _context;
 
