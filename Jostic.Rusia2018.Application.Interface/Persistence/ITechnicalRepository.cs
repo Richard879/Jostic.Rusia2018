@@ -2,7 +2,7 @@
 
 namespace Jostic.Rusia2018.Application.Interface.Persistence
 {
-    public interface ITechnicalRepository : IGenericRespositoryAsync<Technical>
+    public interface ITechnicalRepository : IReadable<Technical>, IWriteable<Technical>, IRemovable<Technical>
     {
     }
 }

@@ -1,9 +1,8 @@
-﻿using Jostic.Rusia2018.Application.Interface.Persistence;
+﻿using Dapper;
+using Jostic.Rusia2018.Application.Interface.Persistence;
 using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Persistence.Context;
 using System.Data;
-using Dapper;
-using System.Linq;
 
 namespace Jostic.Rusia2018.Persistence.Repositories
 {
@@ -15,69 +14,6 @@ namespace Jostic.Rusia2018.Persistence.Repositories
         {
             _context = context;
         }
-
-        #region Métodos Síncronos
-        public bool Insert(Country entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Update(Country entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Country Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Country> GetAll()
-        {
-            using (var connection = _context.CreateConnection())
-            {
-                var query = "GrupoList";
-
-                var paises = connection.Query<Country>(query, commandType: CommandType.StoredProcedure);
-                return paises;
-            }
-        }
-
-        public IEnumerable<Country> GetPaisesAll()
-        {
-            using (var connection = _context.CreateConnection())
-            {
-                var query = "PaisListAll";
-
-                var paises = connection.Query<Country, Group, Continent, Technical, Country>(query, (country, group, continent, technical) => {
-                    country.grupo = group;
-                    country.continente = continent;
-                    country.tecnico = technical;
-                    return country;
-                },
-                splitOn: "descripcion, idGrupo, idContinente, idTecnico").ToList();
-
-                return paises;
-            }
-        }
-
-        public IEnumerable<Country> GetAllWithPagination(int pageNumber, int pageSize)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Count()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
 
         #region Métodos Asíncronos
 
@@ -175,7 +111,6 @@ namespace Jostic.Rusia2018.Persistence.Repositories
         {
             throw new NotImplementedException();
         }
-
         #endregion
     }
 }
