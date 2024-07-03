@@ -38,9 +38,9 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         [HttpPut("Update/{idContinente}")]
         public async Task<IActionResult> Update(int idContinente, [FromBody] UpdateContinentCommand command)
         {
-            var customerDto = await _mediator.Send(new GetContinentQuery() { idContinente = idContinente });
-            if (customerDto.Data == null)
-                return NotFound(customerDto.Message);
+            var entityDto = await _mediator.Send(new GetContinentQuery() { idContinente = idContinente });
+            if (entityDto.Data == null)
+                return NotFound(entityDto.Message);
 
             if (command == null)
                 return BadRequest();

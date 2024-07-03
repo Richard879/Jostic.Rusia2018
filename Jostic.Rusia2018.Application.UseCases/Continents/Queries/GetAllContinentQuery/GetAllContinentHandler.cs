@@ -28,7 +28,6 @@ namespace Jostic.Rusia2018.Application.UseCases.Continents.Queries.GetAllGrupoQu
             {
                 response.IsSuccess = true;
                 response.Message = "Consulta exitosa..!!";
-                //_logger.LogInformation("Consulta exitosa..!!");
             }
             return response;
         }

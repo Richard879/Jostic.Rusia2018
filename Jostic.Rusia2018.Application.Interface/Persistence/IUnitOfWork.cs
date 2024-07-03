@@ -7,5 +7,6 @@
         ICountryRepository Countrys { get; }
         IContinentRepository Continents { get; }
         ITechnicalRepository Technicals { get; }
+        IPhaseRepository Phases { get; }
     }
 }
