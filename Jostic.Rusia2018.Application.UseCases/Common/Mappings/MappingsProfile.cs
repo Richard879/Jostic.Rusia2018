@@ -5,6 +5,12 @@ using Jostic.Rusia2018.Application.UseCases.Groups.Commands.CreateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Groups.Commands.UpdateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand;
+using Jostic.Rusia2018.Application.UseCases.Continents.Commands.UpdateContinentCommand;
+using Jostic.Rusia2018.Application.UseCases.Continents.Commands.CreateContinentCommand;
+using Jostic.Rusia2018.Application.UseCases.Technicals.Commands.CreateTechnicalCommand;
+using Jostic.Rusia2018.Application.UseCases.Technicals.Commands.UpdateTechnicalCommand;
+using Jostic.Rusia2018.Application.UseCases.Phases.Commands.CreatePhaseCommand;
+using Jostic.Rusia2018.Application.UseCases.Phases.Commands.UpdatePhaseCommand;
 
 namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
 {
@@ -20,9 +26,16 @@ namespace Jostic.Rusia2018.Application.UseCases.Common.Mapgings
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<Continent, ContinentDto>().ReverseMap();
             CreateMap<Technical, TechnicalDto>().ReverseMap();
+            CreateMap<Phase, PhaseDto>().ReverseMap();
 
             CreateMap<Group, CreateGroupCommand>().ReverseMap();
             CreateMap<Group, UpdateGroupCommand>().ReverseMap();
+            CreateMap<Continent, CreateContinentCommand>().ReverseMap();
+            CreateMap<Continent, UpdateContinentCommand>().ReverseMap();
+            CreateMap<Technical, CreateTechnicalCommand>().ReverseMap();
+            CreateMap<Technical, UpdateTechnicalCommand>().ReverseMap();
+            CreateMap<Phase, CreatePhaseCommand>().ReverseMap();
+            CreateMap<Phase, UpdatePhaseCommand>().ReverseMap();
             CreateMap<Country, GetCountryAllFilterQuery>().ReverseMap();
             CreateMap<Country, CreateCountryCommand>().ReverseMap();
 
