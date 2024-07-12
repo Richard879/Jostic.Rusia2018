@@ -1,8 +1,8 @@
 ﻿using Asp.Versioning;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetAllQuery;
-using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter;
-using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllQuery;
+using Jostic.Rusia2018.Application.UseCases.Countries.Queries.GetCountriesAllFilter;
+using Jostic.Rusia2018.Application.UseCases.Countries.Queries.GetCountriesAllQuery;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -48,7 +48,7 @@ namespace Jostic.Rusia2018.Services.WebApi.Controllers.v2
         [HttpGet("GetPaisesAll")]
         public async Task<IActionResult> GetPaisesAll()
         {
-            var response = await _mediator.Send(new GetCountrysAllQuery());
+            var response = await _mediator.Send(new GetCountriesAllQuery());
 
 
             if (response.IsSuccess)

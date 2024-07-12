@@ -4,7 +4,7 @@
     {
         IUsersRepository Users { get; }
         IGroupRepository Groups { get; }
-        ICountryRepository Countrys { get; }
+        ICountryRepository Countries { get; }
         IContinentRepository Continents { get; }
         ITechnicalRepository Technicals { get; }
         IPhaseRepository Phases { get; }

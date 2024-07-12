@@ -3,7 +3,7 @@ using Jostic.Rusia2018.Domain.Entity;
 using Jostic.Rusia2018.Application.DTO;
 using Jostic.Rusia2018.Application.UseCases.Groups.Commands.CreateGrupoCommand;
 using Jostic.Rusia2018.Application.UseCases.Groups.Commands.UpdateGrupoCommand;
-using Jostic.Rusia2018.Application.UseCases.Countrys.Queries.GetPaisesAllFilter;
+using Jostic.Rusia2018.Application.UseCases.Countries.Queries.GetCountriesAllFilter;
 using Jostic.Rusia2018.Application.UseCases.Countrys.Commands.CreateCountryCommand;
 using Jostic.Rusia2018.Application.UseCases.Continents.Commands.UpdateContinentCommand;
 using Jostic.Rusia2018.Application.UseCases.Continents.Commands.CreateContinentCommand;

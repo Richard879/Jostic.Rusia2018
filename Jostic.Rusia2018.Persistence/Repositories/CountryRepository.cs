@@ -59,7 +59,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             }
         }
 
-        public async Task<IEnumerable<Country>> GetPaisesAllAsync()
+        public async Task<IEnumerable<Country>> GetCountriesAllAsync()
         {
             using (var connection = _context.CreateConnection())
             {
@@ -77,7 +77,7 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             }
         }
 
-        public async Task<IEnumerable<Country>> GetPaisesAllFiltro(Country entity)
+        public async Task<IEnumerable<Country>> GetCountriesAllFilter(Country entity)
         {
             using (var connection = _context.CreateConnection())
             {
@@ -107,9 +107,35 @@ namespace Jostic.Rusia2018.Persistence.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<int> CountAsync()
+        public async Task<int> CountAsync()
         {
-            throw new NotImplementedException();
+            using var connection = _context.CreateConnection();
+            var query = "Select Count(*) from Pais";
+            var parameters = new DynamicParameters();
+
+            var count = await connection.ExecuteScalarAsync<int>(query, commandType: CommandType.Text);
+            return count;
+        }
+
+        public async Task<IEnumerable<Country>> GetCountryValidate(Country entity)
+        {
+            using (var connection = _context.CreateConnection())
+            {
+                var query = "PaisListAll";
+
+                var paises = await connection.QueryAsync<Country, Group, Continent, Technical, Country>(query, (country, group, continent, technical) => {
+                    country.grupo = group;
+                    country.continente = continent;
+                    country.tecnico = technical;
+                    return country;
+                },
+                splitOn: "descripcion, idGrupo, idContinente, idTecnico");
+
+                var filter = paises.Where(p => (p.nomPais == entity.nomPais) ||
+                                            (p.tecnico.idTecnico == entity.tecnico.idTecnico)).ToList();
+
+                return filter;
+            }
         }
         #endregion
     }
