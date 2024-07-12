@@ -16,6 +16,7 @@ namespace Jostic.Rusia2018.Persistence
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<IContinentRepository, ContinentRepository>();
             services.AddScoped<IPhaseRepository, PhaseRepository>();
+            services.AddScoped<ITechnicalRepository, TechnicalRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
