@@ -5,7 +5,8 @@ Esta es una aplicación empresarial desarrollada en .Net con el patrón Clean Ar
 ![image](https://github.com/Richard879/Jostic.Rusia2018/assets/36724120/3c259da6-e92c-4705-8e15-dd71cbeef1db)
 
 3. Ejecutar procedure GrupoList.sql (carpeta sp)
-4. Ejecutar proyecto Jostic.Rusia2018.sln
+4. Configurar credenciales en el archivo appsettings.json (Services.WebApi)
+5. Ejecutar proyecto Jostic.Rusia2018.sln
    
 ![image](https://github.com/Richard879/Jostic.Rusia2018/assets/36724120/6ae59403-e470-4664-98ad-262e4d0cea38)
 
